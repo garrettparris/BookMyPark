@@ -1,0 +1,4350 @@
+[
+    
+    {
+        "name": "Carlisle Memorial Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.98193069278804,
+            43.39477508767762
+        ]
+    },
+    {
+        "name": "Millgrove Community Park",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -79.959728343967,
+            43.3343517099912
+        ]
+    },
+    {
+        "name": "Millgrove Community Park",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -79.95866437653343,
+            43.334455281790085
+        ]
+    },
+    {
+        "name": "Sealy Park",
+        "type": "Tennis",
+        "area": "Flamborough",
+        "point": [
+            -79.88973051020339,
+            43.331255348863266
+        ]
+    },
+    {
+        "name": "Sealy Park",
+        "type": "Tennis",
+        "area": "Flamborough",
+        "point": [
+            -79.8895652934372,
+            43.33131690570962
+        ]
+    },
+    {
+        "name": "Churchill Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.90244649326888,
+            43.26813360621455
+        ]
+    },
+    {
+        "name": "Churchill Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.90291573217063,
+            43.267698738348834
+        ]
+    },
+    {
+        "name": "Churchill Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.90324292304298,
+            43.26660855981367
+        ]
+    },
+    {
+        "name": "Churchill Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.90459008136189,
+            43.265752947465174
+        ]
+    },
+    {
+        "name": "Churchill Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.90414984597587,
+            43.267690133073025
+        ]
+    },
+    {
+        "name": "Churchill Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.90175615467578,
+            43.26919985908734
+        ]
+    },
+    {
+        "name": "Churchill Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.9022291697434,
+            43.26855556353652
+        ]
+    },
+    {
+        "name": "Churchill Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.90378496988794,
+            43.26481266058356
+        ]
+    },
+    {
+        "name": "Palomino Ranch",
+        "type": "Tennis",
+        "area": "Flamborough",
+        "point": [
+            -79.97279463561655,
+            43.407549788435226
+        ]
+    },
+    {
+        "name": "Palomino Ranch",
+        "type": "Tennis",
+        "area": "Flamborough",
+        "point": [
+            -79.972627481047,
+            43.40759298982469
+        ]
+    },
+    {
+        "name": "Gatesbury Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.887331242261,
+            43.34253561391999
+        ]
+    },
+    {
+        "name": "Gatesbury Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.88674793279144,
+            43.34247118495502
+        ]
+    },
+    {
+        "name": "Gatesbury Park",
+        "type": "Soccer",
+        "area": "Flamborough",
+        "point": [
+            -79.88552396665044,
+            43.342607421985484
+        ]
+    },
+    {
+        "name": "Gatesbury Park",
+        "type": "Soccer",
+        "area": "Flamborough",
+        "point": [
+            -79.88853643500065,
+            43.341893396075264
+        ]
+    },
+    {
+        "name": "Beasley Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.86262255385849,
+            43.257834763965114
+        ]
+    },
+    {
+        "name": "Woodland Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.84345341784886,
+            43.25947377734445
+        ]
+    },
+    {
+        "name": "Woodland Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.8447069920632,
+            43.259721458011995
+        ]
+    },
+    {
+        "name": "Olympic Sports Park 1",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.93324449800272,
+            43.27381937093436
+        ]
+    },
+    {
+        "name": "Olympic Sports Park 1",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.93277955921977,
+            43.27441788903858
+        ]
+    },
+    {
+        "name": "Olympic Sports Park 1",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.93250899343168,
+            43.274696356858236
+        ]
+    },
+    {
+        "name": "Olympic Sports Park 1",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.93517036851274,
+            43.272038965719865
+        ]
+    },
+    {
+        "name": "Lucy Day Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.83375403351947,
+            43.25795686951801
+        ]
+    },
+    {
+        "name": "Garth St. Reservoir",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90745962905028,
+            43.2142949955213
+        ]
+    },
+    {
+        "name": "Garth St. Reservoir",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90583770425442,
+            43.21389694240924
+        ]
+    },
+    {
+        "name": "Lynden Lions South",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.14715771065485,
+            43.227184074530804
+        ]
+    },
+    {
+        "name": "Lynden Lions South",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.14701059299055,
+            43.226841028940385
+        ]
+    },
+    {
+        "name": "Lynden Lions South",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -80.14858556381283,
+            43.22731450075259
+        ]
+    },
+    {
+        "name": "Lynden Lions South",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -80.14847348616478,
+            43.2263792988468
+        ]
+    },
+    {
+        "name": "Waterdown Memorial Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.90077278392575,
+            43.335257711582756
+        ]
+    },
+    {
+        "name": "Waterdown Memorial Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.90066826514477,
+            43.336007714110345
+        ]
+    },
+    {
+        "name": "Waterdown Memorial Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.89980687930814,
+            43.336035192794334
+        ]
+    },
+    {
+        "name": "Waterdown Memorial Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.90222171424647,
+            43.33680429728149
+        ]
+    },
+    {
+        "name": "Waterdown Memorial Park",
+        "type": "Soccer",
+        "area": "Flamborough",
+        "point": [
+            -79.90300569082711,
+            43.33757815353876
+        ]
+    },
+    {
+        "name": "Jackie Washington Park",
+        "type": "Basketball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.85466921597731,
+            43.26526268110446
+        ]
+    },
+    {
+        "name": "Eastwood Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.85676645227993,
+            43.27385647293875
+        ]
+    },
+    {
+        "name": "Eastwood Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.85641949480512,
+            43.27334210983755
+        ]
+    },
+    {
+        "name": "Eastwood Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.85570194731949,
+            43.27282914778905
+        ]
+    },
+    {
+        "name": "Eastwood Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.85487831197167,
+            43.27200858265806
+        ]
+    },
+    {
+        "name": "Eastwood Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.85453337350329,
+            43.2732517111167
+        ]
+    },
+    {
+        "name": "Eastwood Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.85551797333302,
+            43.27334741331961
+        ]
+    },
+    {
+        "name": "Kinsmen Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.77919048764977,
+            43.2741685479912
+        ]
+    },
+    {
+        "name": "Mclaren Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.86416269999646,
+            43.26068861806448
+        ]
+    },
+    {
+        "name": "Edwards Memorial Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.97130027291915,
+            43.266233759315796
+        ]
+    },
+    {
+        "name": "Edwards Memorial Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.97048190319043,
+            43.26584322436647
+        ]
+    },
+    {
+        "name": "Sheffield Ball Park",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -80.20914463603184,
+            43.32359852142794
+        ]
+    },
+    {
+        "name": "Sheffield Ball Park",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -80.20860198378645,
+            43.32288692369667
+        ]
+    },
+    {
+        "name": "Gourley Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.90002756219535,
+            43.21824791697823
+        ]
+    },
+    {
+        "name": "Martino Memorial Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.94213866802755,
+            43.26774313409918
+        ]
+    },
+    {
+        "name": "Martino Memorial Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.94199948464609,
+            43.26851329900894
+        ]
+    },
+    {
+        "name": "Belmont Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.91413735099285,
+            43.32210224686032
+        ]
+    },
+    {
+        "name": "Carlisle Community Centre Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.98241972161136,
+            43.397369625862105
+        ]
+    },
+    {
+        "name": "Carlisle Community Centre Park",
+        "type": "Baseball",
+        "area": "Flamborough",
+        "point": [
+            -79.98283866821329,
+            43.396198318249304
+        ]
+    },
+    {
+        "name": "Carlisle Community Centre Park",
+        "type": "Tennis",
+        "area": "Flamborough",
+        "point": [
+            -79.98052164132163,
+            43.3960806167288
+        ]
+    },
+    {
+        "name": "Veterans Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.98198991919993,
+            43.26034680224488
+        ]
+    },
+    {
+        "name": "Veterans Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.98226577637435,
+            43.25994309418481
+        ]
+    },
+    {
+        "name": "Veterans Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.98075096077774,
+            43.260026676234105
+        ]
+    },
+    {
+        "name": "Veterans Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.98254178452366,
+            43.26036959387235
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.11424841342144,
+            43.299627372925265
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.11328490987725,
+            43.29902216084661
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.11282247042259,
+            43.29859453241069
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -80.11091547135916,
+            43.2993767201914
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.11441864714412,
+            43.2980193731405
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Tennis",
+        "area": "Wentworth",
+        "point": [
+            -80.11023988710396,
+            43.298216845343944
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Tennis",
+        "area": "Wentworth",
+        "point": [
+            -80.11000171844492,
+            43.298240536444524
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.11252430043531,
+            43.300819719154184
+        ]
+    },
+    {
+        "name": "Beverly Community Park",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.11129717153638,
+            43.30102476572643
+        ]
+    },
+    {
+        "name": "Little John Park",
+        "type": "Tennis",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.94642948502286,
+            43.25652269353808
+        ]
+    },
+    {
+        "name": "Confederation Beach Park",
+        "type": "Basketball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.76788457533362,
+            43.261467786018684
+        ]
+    },
+    {
+        "name": "Centennial Heights Park",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.0441490475746,
+            43.40018081752285
+        ]
+    },
+    {
+        "name": "Centennial Heights Park",
+        "type": "Soccer",
+        "area": "Wentworth",
+        "point": [
+            -80.04355711497584,
+            43.40017331361145
+        ]
+    },
+    {
+        "name": "Centennial Heights Park",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -80.04285852232162,
+            43.39982006664982
+        ]
+    },
+    {
+        "name": "Freelton Community Park",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -80.04084547960379,
+            43.402623284483795
+        ]
+    },
+    {
+        "name": "Freelton Community Park",
+        "type": "Tennis",
+        "area": "Wentworth",
+        "point": [
+            -80.04045980713755,
+            43.40197633463358
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88347153105126,
+            43.25343540838978
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88413391786212,
+            43.254481545913706
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.8839633063239,
+            43.25444667335744
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88371973463603,
+            43.254388098031676
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88356314668484,
+            43.25435080713826
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88339957012725,
+            43.25431344690667
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88324307590904,
+            43.25427104819079
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88306906445692,
+            43.25423103190579
+        ]
+    },
+    {
+        "name": "Hamilton Amateur Athletic Assoc.",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88291247733824,
+            43.25419373922909
+        ]
+    },
+    {
+        "name": "Kopperfield Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.9270433052156,
+            43.201089347085116
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -80.00832384775713,
+            43.220329550791426
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -80.00884883900282,
+            43.21983341845261
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -80.00816929392862,
+            43.219520988368814
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -80.00775738215685,
+            43.219936355149265
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -80.00660831931056,
+            43.220575225467286
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -80.00630737194679,
+            43.2201792180046
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -80.00634798809863,
+            43.21896873707498
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -80.00558246923349,
+            43.217930066406
+        ]
+    },
+    {
+        "name": "Robert E. Wade Ancaster Community Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -80.00542256018902,
+            43.21745353811575
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84918834422389,
+            43.22434617495534
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84847761219146,
+            43.22424951457802
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84772706885947,
+            43.224066734672405
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84789703273086,
+            43.22367935609692
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84865702134651,
+            43.2238510003002
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.85037282223215,
+            43.22361268201677
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84979757810893,
+            43.22347771979115
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84919602364245,
+            43.22332990421766
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84860407589306,
+            43.22318100167334
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84801228660181,
+            43.22304214591874
+        ]
+    },
+    {
+        "name": "Macassa Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84742315553123,
+            43.222897233965526
+        ]
+    },
+    {
+        "name": "William Schwenger Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.91921223244897,
+            43.212223974629765
+        ]
+    },
+    {
+        "name": "William Schwenger Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.91762941640809,
+            43.21181689964403
+        ]
+    },
+    {
+        "name": "William Schwenger Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.91411970509725,
+            43.212202484858565
+        ]
+    },
+    {
+        "name": "Huntington Park/recreation Centre",
+        "type": "Tennis",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83003606177235,
+            43.22024134115809
+        ]
+    },
+    {
+        "name": "Huntington Park/recreation Centre",
+        "type": "Tennis",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82986584800076,
+            43.22020668907805
+        ]
+    },
+    {
+        "name": "Huntington Park/recreation Centre",
+        "type": "Tennis",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82968786271202,
+            43.2201648931071
+        ]
+    },
+    {
+        "name": "Huntington Park/recreation Centre",
+        "type": "Tennis",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82951976578002,
+            43.22012541948344
+        ]
+    },
+    {
+        "name": "Corktown Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.86382350303418,
+            43.248932517417046
+        ]
+    },
+    {
+        "name": "Corktown Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.86323942400767,
+            43.2487708906961
+        ]
+    },
+    {
+        "name": "Corktown Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.86205302025984,
+            43.248301841719154
+        ]
+    },
+    {
+        "name": "Corktown Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.86275202328713,
+            43.24869632681691
+        ]
+    },
+    {
+        "name": "Carpenter Neighbourhood Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.9220133078571,
+            43.20685592310724
+        ]
+    },
+    {
+        "name": "Southampton Estates Park",
+        "type": "Basketball",
+        "area": "Glanbrook",
+        "point": [
+            -79.9243177142898,
+            43.147171363150356
+        ]
+    },
+    {
+        "name": "Mount Hope Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.91105610141433,
+            43.15970586646487
+        ]
+    },
+    {
+        "name": "Mount Hope Park",
+        "type": "Tennis",
+        "area": "Glanbrook",
+        "point": [
+            -79.91074694267438,
+            43.16001968366727
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.82900243448096,
+            43.23860224719103
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.82786821013384,
+            43.238169140179046
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83064660701032,
+            43.23936004574645
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83080014880272,
+            43.239431654853
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83095349029675,
+            43.23951369352781
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83110691889456,
+            43.23959126210577
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83137309599232,
+            43.239315313115895
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.8312156215124,
+            43.239236213290276
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83107835494522,
+            43.23916626132295
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83092495592959,
+            43.23908720274459
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.82962876657312,
+            43.24344877931347
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83050905479497,
+            43.23887879272347
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83035551595788,
+            43.238807183251986
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.83010162014251,
+            43.23908027498498
+        ]
+    },
+    {
+        "name": "Gage Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.8302571985497,
+            43.23915190565235
+        ]
+    },
+    {
+        "name": "T.melville Bailey Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.8792573524956,
+            43.24174468632359
+        ]
+    },
+    {
+        "name": "Captain Cornelius Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.89582910564349,
+            43.224415519995496
+        ]
+    },
+    {
+        "name": "Captain Cornelius Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.89477591472367,
+            43.22415053587252
+        ]
+    },
+    {
+        "name": "Buchanan Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.8900662176711,
+            43.23441892838298
+        ]
+    },
+    {
+        "name": "Buchanan Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.88930448942723,
+            43.23424053417475
+        ]
+    },
+    {
+        "name": "Buchanan Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.89061975054396,
+            43.233445121161864
+        ]
+    },
+    {
+        "name": "Buchanan Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.88990887469177,
+            43.23374116132478
+        ]
+    },
+    {
+        "name": "J.c. Beemer Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.85542885962847,
+            43.25540454303143
+        ]
+    },
+    {
+        "name": "Myrtle Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.84898308646508,
+            43.24844890833446
+        ]
+    },
+    {
+        "name": "Kay Drage Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.89061451664415,
+            43.267702701423154
+        ]
+    },
+    {
+        "name": "Kay Drage Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.89056638980756,
+            43.26727308254747
+        ]
+    },
+    {
+        "name": "Kay Drage Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.89115416509412,
+            43.269940545933046
+        ]
+    },
+    {
+        "name": "Kay Drage Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.89111510940421,
+            43.27093641185352
+        ]
+    },
+    {
+        "name": "Kay Drage Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.89098508196676,
+            43.27193650474063
+        ]
+    },
+    {
+        "name": "Jackson Playground",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.8889734290894,
+            43.25877339598393
+        ]
+    },
+    {
+        "name": "Victoria Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88394638042023,
+            43.263027001998694
+        ]
+    },
+    {
+        "name": "Victoria Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88423791572394,
+            43.26160955730825
+        ]
+    },
+    {
+        "name": "Victoria Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88366688249769,
+            43.26340233755697
+        ]
+    },
+    {
+        "name": "Victoria Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88348580834943,
+            43.26336480669747
+        ]
+    },
+    {
+        "name": "Victoria Park",
+        "type": "Tennis",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.88331866618931,
+            43.26332996706633
+        ]
+    },
+    {
+        "name": "Central Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.87357565820184,
+            43.26340430406536
+        ]
+    },
+    {
+        "name": "Central Park",
+        "type": "Basketball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.87258915445541,
+            43.26363725937381
+        ]
+    },
+    {
+        "name": "Central Park",
+        "type": "Basketball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.87241195884258,
+            43.263579314256816
+        ]
+    },
+    {
+        "name": "Central Park",
+        "type": "Basketball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.87221393549781,
+            43.26351349971763
+        ]
+    },
+    {
+        "name": "Bullock's Corners",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -79.99003609509738,
+            43.27519751440945
+        ]
+    },
+    {
+        "name": "Bullock's Corners",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -79.9905145257819,
+            43.2744897718198
+        ]
+    },
+    {
+        "name": "Bullock's Corners",
+        "type": "Tennis",
+        "area": "Wentworth",
+        "point": [
+            -79.98922481718296,
+            43.274741629562385
+        ]
+    },
+    {
+        "name": "Bullock's Corners",
+        "type": "Tennis",
+        "area": "Wentworth",
+        "point": [
+            -79.98906053289167,
+            43.274773083953015
+        ]
+    },
+    {
+        "name": "Bullock's Corners",
+        "type": "Tennis",
+        "area": "Wentworth",
+        "point": [
+            -79.98887163782395,
+            43.27480731186485
+        ]
+    },
+    {
+        "name": "Amberly Park",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -79.99446745993244,
+            43.20778348226667
+        ]
+    },
+    {
+        "name": "Meadowlands Community Park",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -79.9498069447307,
+            43.22062217747502
+        ]
+    },
+    {
+        "name": "Meadowlands Community Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -79.94935133855111,
+            43.21928709980983
+        ]
+    },
+    {
+        "name": "Meadowlands Community Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -79.94823059046809,
+            43.21946327959938
+        ]
+    },
+    {
+        "name": "Meadowlands Community Park",
+        "type": "Tennis",
+        "area": "Ancaster",
+        "point": [
+            -79.94723031087189,
+            43.21974273648509
+        ]
+    },
+    {
+        "name": "Meadowlands Community Park",
+        "type": "Basketball",
+        "area": "Ancaster",
+        "point": [
+            -79.946764289446,
+            43.219827853744775
+        ]
+    },
+    {
+        "name": "Sanctuary Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.9701500941351,
+            43.25504499390605
+        ]
+    },
+    {
+        "name": "Sanctuary Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.96913716154523,
+            43.255424151253735
+        ]
+    },
+    {
+        "name": "Leslie B. Couldrey Park",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.97912607808331,
+            43.255401341706815
+        ]
+    },
+    {
+        "name": "Village Green Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -79.97601369740606,
+            43.22463787689534
+        ]
+    },
+    {
+        "name": "Village Green Park",
+        "type": "Tennis",
+        "area": "Ancaster",
+        "point": [
+            -79.97550982058797,
+            43.224584830206624
+        ]
+    },
+    {
+        "name": "Village Green Park",
+        "type": "Tennis",
+        "area": "Ancaster",
+        "point": [
+            -79.975564135125,
+            43.224470364252355
+        ]
+    },
+    {
+        "name": "Village Green Park",
+        "type": "Tennis",
+        "area": "Ancaster",
+        "point": [
+            -79.97562021786558,
+            43.224354636345254
+        ]
+    },
+    {
+        "name": "Meadowlands Soccer Pitch",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -79.94563393806543,
+            43.22785644266858
+        ]
+    },
+    {
+        "name": "Rosebough Park",
+        "type": "Baseball",
+        "area": "Wentworth",
+        "point": [
+            -79.9931040937978,
+            43.271257891761124
+        ]
+    },
+    {
+        "name": "Mark Anthony Graham Memorial Olympic Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.9298547562626,
+            43.237729283659974
+        ]
+    },
+    {
+        "name": "Mark Anthony Graham Memorial Olympic Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92960344272556,
+            43.237239923852876
+        ]
+    },
+    {
+        "name": "Mark Anthony Graham Memorial Olympic Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92955376028455,
+            43.23597371138135
+        ]
+    },
+    {
+        "name": "Mark Anthony Graham Memorial Olympic Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.9286889210708,
+            43.23605591402809
+        ]
+    },
+    {
+        "name": "Mountview Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92297625672062,
+            43.239042123455384
+        ]
+    },
+    {
+        "name": "Mountview Park",
+        "type": "Playground",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92567488260062,
+            43.23934361317031
+        ]
+    },
+    {
+        "name": "Mountview Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92546355829825,
+            43.238838108250484
+        ]
+    },
+    {
+        "name": "Chedoke Twin Pad Arena",
+        "type": "Bocce",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92087808295072,
+            43.238914655023585
+        ]
+    },
+    {
+        "name": "Chedoke Twin Pad Arena",
+        "type": "Bocce",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.9208217579996,
+            43.23892643204069
+        ]
+    },
+    {
+        "name": "Chedoke Twin Pad Arena",
+        "type": "Bocce",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92076429671485,
+            43.23893901862879
+        ]
+    },
+    {
+        "name": "Chedoke Twin Pad Arena",
+        "type": "Bocce",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92070121052122,
+            43.238952372433786
+        ]
+    },
+    {
+        "name": "Alexander Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.92639189474328,
+            43.252811753821874
+        ]
+    },
+    {
+        "name": "Alexander Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.92603488395721,
+            43.25204716576911
+        ]
+    },
+    {
+        "name": "Alexander Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.92718338550328,
+            43.252318500448396
+        ]
+    },
+    {
+        "name": "Alexander Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.92682790149459,
+            43.251068577877355
+        ]
+    },
+    {
+        "name": "Alexander Park",
+        "type": "Basketball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.92740290999622,
+            43.25275354503701
+        ]
+    },
+    {
+        "name": "Alexander Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.92751962650448,
+            43.25286965961955
+        ]
+    },
+    {
+        "name": "Ancaster Little League (Spring Valley Bowl)",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -79.99919730033373,
+            43.21746381162237
+        ]
+    },
+    {
+        "name": "Ancaster Little League (Spring Valley Bowl)",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -79.99760975230936,
+            43.21820785870042
+        ]
+    },
+    {
+        "name": "Ancaster Little League (Spring Valley Bowl)",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -80.0002514895572,
+            43.21710058977468
+        ]
+    },
+    {
+        "name": "James Smith Park",
+        "type": "Tennis",
+        "area": "Ancaster",
+        "point": [
+            -79.99088993428498,
+            43.20151898081636
+        ]
+    },
+    {
+        "name": "James Smith Park",
+        "type": "Tennis",
+        "area": "Ancaster",
+        "point": [
+            -79.99068752040547,
+            43.20151208674972
+        ]
+    },
+    {
+        "name": "James Smith Park",
+        "type": "Basketball",
+        "area": "Ancaster",
+        "point": [
+            -79.99080042882844,
+            43.2010175074766
+        ]
+    },
+    {
+        "name": "James Smith Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -79.98944981141474,
+            43.201608448778934
+        ]
+    },
+    {
+        "name": "James Smith Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -79.98923154086262,
+            43.202561906262815
+        ]
+    },
+    {
+        "name": "James Smith Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -79.98877059093233,
+            43.202562941769806
+        ]
+    },
+    {
+        "name": "James Smith Park",
+        "type": "Soccer",
+        "area": "Ancaster",
+        "point": [
+            -79.98840074804961,
+            43.201488055395494
+        ]
+    },
+    {
+        "name": "William Mcculloch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90721535977589,
+            43.22863434727729
+        ]
+    },
+    {
+        "name": "William Mcculloch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90736027182913,
+            43.22828424502427
+        ]
+    },
+    {
+        "name": "William Mcculloch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90679251355958,
+            43.228501879332946
+        ]
+    },
+    {
+        "name": "William Mcculloch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90694606529303,
+            43.22818565633119
+        ]
+    },
+    {
+        "name": "William Mcculloch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90859502182728,
+            43.22777473063468
+        ]
+    },
+    {
+        "name": "William Mcculloch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90739989088473,
+            43.22734089627288
+        ]
+    },
+    {
+        "name": "Holbrook Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.91497887318185,
+            43.23734867317855
+        ]
+    },
+    {
+        "name": "Fonthill Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.91613339424859,
+            43.228781436571325
+        ]
+    },
+    {
+        "name": "Scenic Woods",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -79.93450514303578,
+            43.238623966303834
+        ]
+    },
+    {
+        "name": "St. Vincent De Paul Playground",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.92195223429724,
+            43.22348288506743
+        ]
+    },
+    {
+        "name": "Moorland Park",
+        "type": "Basketball",
+        "area": "Ancaster",
+        "point": [
+            -79.95744499851138,
+            43.21186752203147
+        ]
+    },
+    {
+        "name": "Shawinigan Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.92074468751669,
+            43.222672977968934
+        ]
+    },
+    {
+        "name": "Gilkson Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.91262408726013,
+            43.22168690402765
+        ]
+    },
+    {
+        "name": "Gilkson Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.91349196686035,
+            43.221159781800395
+        ]
+    },
+    {
+        "name": "Gilkson Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.91191680634995,
+            43.22144513315396
+        ]
+    },
+    {
+        "name": "Kitty Murray Park",
+        "type": "Baseball",
+        "area": "Ancaster",
+        "point": [
+            -79.95546591723584,
+            43.22141735077598
+        ]
+    },
+    {
+        "name": "Eleanor Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.85651642877585,
+            43.197980291943786
+        ]
+    },
+    {
+        "name": "Eleanor Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.85547496165674,
+            43.197706511898375
+        ]
+    },
+    {
+        "name": "Eleanor Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.85527423203929,
+            43.1981038115189
+        ]
+    },
+    {
+        "name": "Peace Memorial",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.83935885202546,
+            43.23543424922349
+        ]
+    },
+    {
+        "name": "Burkholder Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.85630878519311,
+            43.22607484598069
+        ]
+    },
+    {
+        "name": "Fernwood Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83407521641817,
+            43.22114290224516
+        ]
+    },
+    {
+        "name": "Hampton Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83605692743309,
+            43.22365774502779
+        ]
+    },
+    {
+        "name": "Hampton Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.83654263104516,
+            43.22287311980353
+        ]
+    },
+    {
+        "name": "Dr. William Bethune Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.88725642365148,
+            43.208506397016386
+        ]
+    },
+    {
+        "name": "Dr. William Bethune Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.88659297608325,
+            43.20802799499285
+        ]
+    },
+    {
+        "name": "Red Hill Bowl",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.79125562546638,
+            43.228957512412
+        ]
+    },
+    {
+        "name": "Red Hill Bowl",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.79130930808523,
+            43.228360772914854
+        ]
+    },
+    {
+        "name": "Red Hill Bowl",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.79225521775734,
+            43.229779795388026
+        ]
+    },
+    {
+        "name": "Red Hill Neighbourhood Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.79595967390075,
+            43.219364467616266
+        ]
+    },
+    {
+        "name": "Valley Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.79500662962326,
+            43.19477171140309
+        ]
+    },
+    {
+        "name": "Valley Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.796147966723,
+            43.19354734958946
+        ]
+    },
+    {
+        "name": "Valley Park",
+        "type": "Tennis",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.79408811162082,
+            43.193898610099545
+        ]
+    },
+    {
+        "name": "Valley Park",
+        "type": "Tennis",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.79389263267439,
+            43.19389654922346
+        ]
+    },
+    {
+        "name": "Valley Park",
+        "type": "Tennis",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.79371819944834,
+            43.19388960160319
+        ]
+    },
+    {
+        "name": "Valley Park",
+        "type": "Tennis",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.79353678458985,
+            43.19388257918372
+        ]
+    },
+    {
+        "name": "Lawfield Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.8496842700534,
+            43.21429196881384
+        ]
+    },
+    {
+        "name": "Lawfield Park",
+        "type": "Tennis",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.85032879810419,
+            43.214908298196114
+        ]
+    },
+    {
+        "name": "Lawfield Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.85009707871426,
+            43.21487347673999
+        ]
+    },
+    {
+        "name": "Montgomery Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.80395120929585,
+            43.23697273104812
+        ]
+    },
+    {
+        "name": "Montgomery Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.80433037391057,
+            43.236061591707234
+        ]
+    },
+    {
+        "name": "Montgomery Park",
+        "type": "Basketball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.80266077995643,
+            43.23734977660239
+        ]
+    },
+    {
+        "name": "Montgomery Park",
+        "type": "Basketball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.80271052611272,
+            43.23721628649405
+        ]
+    },
+    {
+        "name": "Montgomery Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.80356350360675,
+            43.23767575648109
+        ]
+    },
+    {
+        "name": "Belview Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.82285421780459,
+            43.250180234463194
+        ]
+    },
+    {
+        "name": "Maplewood Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.79013958846272,
+            43.18699296871808
+        ]
+    },
+    {
+        "name": "Maplewood Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.78860050885326,
+            43.186440235013976
+        ]
+    },
+    {
+        "name": "Maplewood Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.78765111273185,
+            43.187009710292664
+        ]
+    },
+    {
+        "name": "Sackville Hill Memorial Park",
+        "type": "Football",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.8623856649627,
+            43.2259846353623
+        ]
+    },
+    {
+        "name": "Sackville Hill Memorial Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86244695659661,
+            43.22584486197181
+        ]
+    },
+    {
+        "name": "Sackville Hill Memorial Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86136433257599,
+            43.22803898212216
+        ]
+    },
+    {
+        "name": "Sackville Hill Memorial Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86094709439854,
+            43.2279374719373
+        ]
+    },
+    {
+        "name": "Sackville Hill Memorial Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86045721311353,
+            43.227829935549806
+        ]
+    },
+    {
+        "name": "Sackville Hill Memorial Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86070729872952,
+            43.227294014462466
+        ]
+    },
+    {
+        "name": "Sackville Hill Memorial Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86116222699765,
+            43.227389684888614
+        ]
+    },
+    {
+        "name": "Sackville Hill Memorial Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86162479938126,
+            43.22749081524179
+        ]
+    },
+    {
+        "name": "Inch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86090823426034,
+            43.2368499313751
+        ]
+    },
+    {
+        "name": "Inch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86137099370852,
+            43.236023850524504
+        ]
+    },
+    {
+        "name": "Inch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86024177941664,
+            43.235725705898105
+        ]
+    },
+    {
+        "name": "Inch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.85957587532185,
+            43.23551616074982
+        ]
+    },
+    {
+        "name": "Inch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.85941782538423,
+            43.235959745541216
+        ]
+    },
+    {
+        "name": "Inch Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.85920915977476,
+            43.23633138185401
+        ]
+    },
+    {
+        "name": "Highview Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83121778298135,
+            43.22885744811071
+        ]
+    },
+    {
+        "name": "Highview Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83208742651003,
+            43.229642456953485
+        ]
+    },
+    {
+        "name": "Highview Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.8323765493281,
+            43.22928273267745
+        ]
+    },
+    {
+        "name": "Father Sean O'sullivan Memorial Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.77671592858607,
+            43.21681458767848
+        ]
+    },
+    {
+        "name": "Stoneywood Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.80671522071,
+            43.19038319670772
+        ]
+    },
+    {
+        "name": "Hillcrest Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.77650256354501,
+            43.23877107504598
+        ]
+    },
+    {
+        "name": "Hillcrest Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.77736165724639,
+            43.238236559911776
+        ]
+    },
+    {
+        "name": "Hillcrest Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.77820207200695,
+            43.23863608602795
+        ]
+    },
+    {
+        "name": "Hillcrest Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.77805891847376,
+            43.237937700102165
+        ]
+    },
+    {
+        "name": "Globe Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.7690614438757,
+            43.255013811203405
+        ]
+    },
+    {
+        "name": "Globe Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.76822928682896,
+            43.2532984633808
+        ]
+    },
+    {
+        "name": "Globe Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.76787969003507,
+            43.25528678360433
+        ]
+    },
+    {
+        "name": "Globe Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.7671571517494,
+            43.25458498061456
+        ]
+    },
+    {
+        "name": "Lake Avenue Park/bow Valley Open Space",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.75445829194109,
+            43.23074329088577
+        ]
+    },
+    {
+        "name": "Templemead Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84531372203092,
+            43.1966817206125
+        ]
+    },
+    {
+        "name": "Templemead Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84513938826437,
+            43.19628804995871
+        ]
+    },
+    {
+        "name": "Templemead Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.84509446077358,
+            43.1967143795373
+        ]
+    },
+    {
+        "name": "Mahony Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.79215630893911,
+            43.24649817086072
+        ]
+    },
+    {
+        "name": "Mahony Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.791559876794,
+            43.246972112941656
+        ]
+    },
+    {
+        "name": "Mahony Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.79035906303231,
+            43.24726084802584
+        ]
+    },
+    {
+        "name": "Mahony Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.79103526626231,
+            43.245934559320915
+        ]
+    },
+    {
+        "name": "Rosedale Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.80597674126469,
+            43.21906128320516
+        ]
+    },
+    {
+        "name": "Rosedale Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.80610407734187,
+            43.21870652552945
+        ]
+    },
+    {
+        "name": "Rosedale Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.80466097698931,
+            43.22021918335599
+        ]
+    },
+    {
+        "name": "Powell Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.84123025529621,
+            43.255908886153684
+        ]
+    },
+    {
+        "name": "Billy Sherring Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86686208950076,
+            43.198534209456966
+        ]
+    },
+    {
+        "name": "Billy Sherring Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86617957085468,
+            43.19835809146499
+        ]
+    },
+    {
+        "name": "Billy Sherring Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86512576342639,
+            43.19821244842405
+        ]
+    },
+    {
+        "name": "Billy Sherring Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86384016762332,
+            43.19829566690104
+        ]
+    },
+    {
+        "name": "Bruce Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.87015193784023,
+            43.238569558456064
+        ]
+    },
+    {
+        "name": "Bruce Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.87109148443555,
+            43.23834250658271
+        ]
+    },
+    {
+        "name": "Bruce Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.8703777584261,
+            43.239390158595135
+        ]
+    },
+    {
+        "name": "Beulah Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.8919408528025,
+            43.247412736381456
+        ]
+    },
+    {
+        "name": "Colquhoun Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.9014556050432,
+            43.240556352841494
+        ]
+    },
+    {
+        "name": "Colquhoun Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90209359040112,
+            43.23970202412036
+        ]
+    },
+    {
+        "name": "Highland Gardens Park",
+        "type": "Soccer",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.89166214958014,
+            43.245795419537636
+        ]
+    },
+    {
+        "name": "Highland Gardens Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.89078015548782,
+            43.24548799473611
+        ]
+    },
+    {
+        "name": "Highland Gardens Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.8899228259725,
+            43.24536217218264
+        ]
+    },
+    {
+        "name": "Kennedy East Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.90199109708564,
+            43.20263053374303
+        ]
+    },
+    {
+        "name": "Kennedy East Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.90216450326265,
+            43.20240224864686
+        ]
+    },
+    {
+        "name": "Elmar Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.87581374435679,
+            43.203280375338025
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88074257061115,
+            43.19174651626343
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88025381109702,
+            43.19194088777344
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88001293441012,
+            43.19152290269542
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88050074178639,
+            43.191380476263234
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88114274124402,
+            43.18992340156497
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88169064070877,
+            43.189729603416545
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88141395120874,
+            43.18932858883008
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88087772684561,
+            43.18953115788568
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.88233180397063,
+            43.18831580881182
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.8817071036873,
+            43.18817982017982
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.87774531505084,
+            43.196634716415325
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.87790620204356,
+            43.19610063394075
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.87827250139296,
+            43.19548111224135
+        ]
+    },
+    {
+        "name": "Turner Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.87957787928667,
+            43.1940632275077
+        ]
+    },
+    {
+        "name": "T.b. Mcquesten Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.8650863226878,
+            43.21257787518925
+        ]
+    },
+    {
+        "name": "T.b. Mcquesten Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86410725047979,
+            43.21213706630557
+        ]
+    },
+    {
+        "name": "T.b. Mcquesten Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.862776823111,
+            43.21190976121178
+        ]
+    },
+    {
+        "name": "T.b. Mcquesten Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.86349912575841,
+            43.20998598398197
+        ]
+    },
+    {
+        "name": "T.b. Mcquesten Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.8651237561026,
+            43.21081599654779
+        ]
+    },
+    {
+        "name": "Rushdale Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.86398391701434,
+            43.20962034024991
+        ]
+    },
+    {
+        "name": "Eastmount",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.8476853661157,
+            43.23616706527603
+        ]
+    },
+    {
+        "name": "Eastmount",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84669009227932,
+            43.23581340626875
+        ]
+    },
+    {
+        "name": "Eastmount",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84697790143944,
+            43.23522001039268
+        ]
+    },
+    {
+        "name": "Eastmount",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84790415189255,
+            43.23537722605856
+        ]
+    },
+    {
+        "name": "Eastmount",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.84868169341966,
+            43.23612656776661
+        ]
+    },
+    {
+        "name": "Mountain Drive",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.83576214928492,
+            43.2373160202183
+        ]
+    },
+    {
+        "name": "Bobby Kerr Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83837600769483,
+            43.216525144118386
+        ]
+    },
+    {
+        "name": "Bobby Kerr Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83756766075376,
+            43.216185723241914
+        ]
+    },
+    {
+        "name": "Bobby Kerr Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83843235228112,
+            43.21574735420514
+        ]
+    },
+    {
+        "name": "Bobby Kerr Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83965849940725,
+            43.21650018367566
+        ]
+    },
+    {
+        "name": "Berrisfield Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.8398185040233,
+            43.21059996718299
+        ]
+    },
+    {
+        "name": "Lisgar Park",
+        "type": "Basketball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83036856883547,
+            43.211002478629744
+        ]
+    },
+    {
+        "name": "Lisgar Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.83132787039254,
+            43.21085630330298
+        ]
+    },
+    {
+        "name": "Lisgar Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.83074891159728,
+            43.21023965902224
+        ]
+    },
+    {
+        "name": "Mount Lion's Club Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.84561379339115,
+            43.20233628462777
+        ]
+    },
+    {
+        "name": "Mount Lion's Club Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.84521528309787,
+            43.20296640963242
+        ]
+    },
+    {
+        "name": "Olympic Sports Park 2",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.93587892951452,
+            43.27350671971008
+        ]
+    },
+    {
+        "name": "Olympic Sports Park 2",
+        "type": "Soccer",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.93519422882827,
+            43.274680515025466
+        ]
+    },
+    {
+        "name": "Beach Blvd Park #2",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.79213308168538,
+            43.291526568621165
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82302869356955,
+            43.21013626912584
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82168662180868,
+            43.21146189561918
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.81953190277581,
+            43.21097702978547
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.8241383290224,
+            43.20710977770156
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82457471171239,
+            43.20628226788358
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82287634966605,
+            43.2062894827315
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Baseball",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82333933225827,
+            43.20576754558499
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82170600236566,
+            43.21304858015326
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.8208292258296,
+            43.212831904820995
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.81990097999932,
+            43.20932125293602
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82046071787528,
+            43.20864566404225
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.82103084149101,
+            43.207929753927374
+        ]
+    },
+    {
+        "name": "Mohawk Sports Park",
+        "type": "Soccer",
+        "area": "Hamilton Mountain",
+        "point": [
+            -79.823365564529,
+            43.208686737373895
+        ]
+    },
+    {
+        "name": "St. Christopher's Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.80821879103915,
+            43.254631522688214
+        ]
+    },
+    {
+        "name": "St. Christopher's Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.80849237486211,
+            43.25430224855474
+        ]
+    },
+    {
+        "name": "Andrew Warburton Memorial Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.80308218222268,
+            43.24529958097905
+        ]
+    },
+    {
+        "name": "Roxborough Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.78584570081189,
+            43.23744245990087
+        ]
+    },
+    {
+        "name": "Roxborough Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.78588519209018,
+            43.23650863143778
+        ]
+    },
+    {
+        "name": "Glendale Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7798789799941,
+            43.22441052892001
+        ]
+    },
+    {
+        "name": "Glendale Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.77939947284473,
+            43.22389363001856
+        ]
+    },
+    {
+        "name": "Sam Manson Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.77200239718981,
+            43.23284934323472
+        ]
+    },
+    {
+        "name": "Sam Manson Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.77242466948047,
+            43.232160848266034
+        ]
+    },
+    {
+        "name": "Sam Manson Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.77134510018823,
+            43.23194249723765
+        ]
+    },
+    {
+        "name": "Sam Manson Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.77275192897797,
+            43.231509619801024
+        ]
+    },
+    {
+        "name": "Sam Manson Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.77203483544255,
+            43.23123390193855
+        ]
+    },
+    {
+        "name": "Sam Manson Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.77132052245403,
+            43.231080734056874
+        ]
+    },
+    {
+        "name": "Sam Manson Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.77113154554264,
+            43.23228527712274
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.75887447578164,
+            43.22548828617104
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.75948978428518,
+            43.225096756772224
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.76009963051513,
+            43.22536181902901
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.76026613375055,
+            43.22541339939336
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7604325997162,
+            43.22546689348937
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.76081497191674,
+            43.22520109934823
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.76064057690247,
+            43.22515134865215
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7604792297985,
+            43.22510365436229
+        ]
+    },
+    {
+        "name": "Little League Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.76029725504526,
+            43.225040419457514
+        ]
+    },
+    {
+        "name": "Green Acres Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.76158853300873,
+            43.222293777621516
+        ]
+    },
+    {
+        "name": "Dover Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.77295166890373,
+            43.225730143400575
+        ]
+    },
+    {
+        "name": "Dover Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.77230377862452,
+            43.22566192858758
+        ]
+    },
+    {
+        "name": "Trenholme Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.82744011628427,
+            43.20189004641307
+        ]
+    },
+    {
+        "name": "Albion Estates Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.79751380806749,
+            43.20115624394958
+        ]
+    },
+    {
+        "name": "Albion Estates Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.79743854980681,
+            43.20072118848355
+        ]
+    },
+    {
+        "name": "Pineridge Park",
+        "type": "Basketball",
+        "area": "Ancaster",
+        "point": [
+            -80.00593223269146,
+            43.207579697160114
+        ]
+    },
+    {
+        "name": "White Deer Park",
+        "type": "Soccer",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.78743901026635,
+            43.17721893410414
+        ]
+    },
+    {
+        "name": "White Deer Park",
+        "type": "Basketball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.78650813835645,
+            43.17681183732367
+        ]
+    },
+    {
+        "name": "Cline Park",
+        "type": "Soccer",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.77772380738921,
+            43.17990634306646
+        ]
+    },
+    {
+        "name": "Cline Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.77677538512737,
+            43.1795053658742
+        ]
+    },
+    {
+        "name": "Cline Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.77767157316897,
+            43.17917005182071
+        ]
+    },
+    {
+        "name": "Tapleytown Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.73584915257311,
+            43.18161818133703
+        ]
+    },
+    {
+        "name": "Tapleytown Park",
+        "type": "Soccer",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.73625639993712,
+            43.18065325447316
+        ]
+    },
+    {
+        "name": "Tapleytown Park",
+        "type": "Soccer",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.73579785551237,
+            43.18053763945819
+        ]
+    },
+    {
+        "name": "Cherry Heights Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.74064273290914,
+            43.21945854870404
+        ]
+    },
+    {
+        "name": "Cherry Heights Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74255060380585,
+            43.218525208274094
+        ]
+    },
+    {
+        "name": "Cherry Heights Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7413191252672,
+            43.21832787717628
+        ]
+    },
+    {
+        "name": "Cherry Heights Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74155371150346,
+            43.21888564720327
+        ]
+    },
+    {
+        "name": "Cherry Heights Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74105827725396,
+            43.21879213131184
+        ]
+    },
+    {
+        "name": "Sherwood Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70525079488569,
+            43.21608360285037
+        ]
+    },
+    {
+        "name": "Sherwood Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70535108637633,
+            43.21703430206607
+        ]
+    },
+    {
+        "name": "Sherwood Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70415831460215,
+            43.21699399342278
+        ]
+    },
+    {
+        "name": "Sherwood Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70431475446952,
+            43.21652864111341
+        ]
+    },
+    {
+        "name": "Sherwood Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70382842081914,
+            43.217491840686556
+        ]
+    },
+    {
+        "name": "Sherwood Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70342702559049,
+            43.21741071367695
+        ]
+    },
+    {
+        "name": "Sherwood Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70412006434587,
+            43.217564064535246
+        ]
+    },
+    {
+        "name": "Dewitt Park",
+        "type": "Basketball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7163880982341,
+            43.21410706474187
+        ]
+    },
+    {
+        "name": "Dewitt Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.71685656924379,
+            43.213915042507296
+        ]
+    },
+    {
+        "name": "Dewitt Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.71695550951583,
+            43.214634159936494
+        ]
+    },
+    {
+        "name": "Eastdale Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.7355485970212,
+            43.22839642430596
+        ]
+    },
+    {
+        "name": "Eastdale Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.73716564350742,
+            43.22830995418151
+        ]
+    },
+    {
+        "name": "Eastdale Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7367588168014,
+            43.228232712940226
+        ]
+    },
+    {
+        "name": "Eastdale Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7364096553101,
+            43.22815227854225
+        ]
+    },
+    {
+        "name": "Eastdale Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7357103077007,
+            43.22804117080151
+        ]
+    },
+    {
+        "name": "Eastdale Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.73498395753515,
+            43.22695722372628
+        ]
+    },
+    {
+        "name": "Riverdale East Park (Oaklands)",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74553988698972,
+            43.22784882788242
+        ]
+    },
+    {
+        "name": "Riverdale East Park (Oaklands)",
+        "type": "Basketball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74649550900678,
+            43.22823070689488
+        ]
+    },
+    {
+        "name": "Riverdale East Park (Oaklands)",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74572199001469,
+            43.228926742245285
+        ]
+    },
+    {
+        "name": "Riverdale East Park (Oaklands)",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74598258157647,
+            43.22796472046587
+        ]
+    },
+    {
+        "name": "Ferris Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.72534520496059,
+            43.224944626884245
+        ]
+    },
+    {
+        "name": "Ferris Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.72575798592153,
+            43.2264566128054
+        ]
+    },
+    {
+        "name": "Ferris Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.72633041021433,
+            43.22562063388432
+        ]
+    },
+    {
+        "name": "Bayview West Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.69958180880431,
+            43.23378531100426
+        ]
+    },
+    {
+        "name": "Bayview West Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70051500632022,
+            43.23373465429368
+        ]
+    },
+    {
+        "name": "Bayview West Park",
+        "type": "Basketball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.69998045720278,
+            43.23400043080453
+        ]
+    },
+    {
+        "name": "Woodward Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.77821148256001,
+            43.25010003776835
+        ]
+    },
+    {
+        "name": "Woodward Park",
+        "type": "Baseball",
+        "area": "Lower Hamilton",
+        "point": [
+            -79.77677043798786,
+            43.24981386104999
+        ]
+    },
+    {
+        "name": "Paramount Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.80055209192756,
+            43.20284876966417
+        ]
+    },
+    {
+        "name": "Sherwood Meadows Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.7075807848274,
+            43.21664889173644
+        ]
+    },
+    {
+        "name": "Sherwood Meadows Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70958784510955,
+            43.21721235899478
+        ]
+    },
+    {
+        "name": "Sherwood Meadows Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.70887909448525,
+            43.21705886390649
+        ]
+    },
+    {
+        "name": "Mapledene Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.71063124147896,
+            43.211049048877115
+        ]
+    },
+    {
+        "name": "John Willson Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.6445070566956,
+            43.22172521042318
+        ]
+    },
+    {
+        "name": "John Willson Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.64455953048981,
+            43.22147729955084
+        ]
+    },
+    {
+        "name": "Community Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.76321045440618,
+            43.21761563857088
+        ]
+    },
+    {
+        "name": "Maplewood Green Park",
+        "type": "Soccer",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.78357414270562,
+            43.18640733309869
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.83666369084202,
+            43.130571090036064
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.83557705888055,
+            43.13085636082515
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.83571712792832,
+            43.130459279779195
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.83485745235029,
+            43.130547600305874
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.8351856423352,
+            43.129794800686035
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.83533840139934,
+            43.12946426655005
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.83552157380831,
+            43.12900120709685
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.83566842052872,
+            43.128614412669094
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.83639101147543,
+            43.12913266999427
+        ]
+    },
+    {
+        "name": "Glanbrook Sports Complex",
+        "type": "Soccer",
+        "area": "Glanbrook",
+        "point": [
+            -79.8382568493086,
+            43.13116460244322
+        ]
+    },
+    {
+        "name": "Summit Park",
+        "type": "Soccer",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.81628175136039,
+            43.17897070383504
+        ]
+    },
+    {
+        "name": "Summit Park",
+        "type": "Soccer",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.81558693787771,
+            43.17880002316031
+        ]
+    },
+    {
+        "name": "Waterford Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.69065995920856,
+            43.231109028872694
+        ]
+    },
+    {
+        "name": "Waterford Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.69118741700791,
+            43.23123703254597
+        ]
+    },
+    {
+        "name": "Corman Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.74220722123262,
+            43.214859438335715
+        ]
+    },
+    {
+        "name": "Corman Park",
+        "type": "Bocce",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74230963700523,
+            43.21442605227551
+        ]
+    },
+    {
+        "name": "Corman Park",
+        "type": "Bocce",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74232565866232,
+            43.214387255568695
+        ]
+    },
+    {
+        "name": "Corman Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74168828555203,
+            43.214633228696364
+        ]
+    },
+    {
+        "name": "Corman Park",
+        "type": "Basketball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.74227486605858,
+            43.214620535183535
+        ]
+    },
+    {
+        "name": "Memorial Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.73343469932163,
+            43.21491545373077
+        ]
+    },
+    {
+        "name": "Memorial Park",
+        "type": "Tennis",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.7332652349366,
+            43.214882946191146
+        ]
+    },
+    {
+        "name": "Memorial Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.73305699715844,
+            43.215150353216906
+        ]
+    },
+    {
+        "name": "Memorial Park",
+        "type": "Soccer",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.73231442401021,
+            43.214788177341745
+        ]
+    },
+    {
+        "name": "Winona Park",
+        "type": "Playground",
+        "area": null,
+        "point": [
+            -79.64595566590084,
+            43.20954179470921
+        ]
+    },
+    {
+        "name": "Winona Park",
+        "type": "Baseball",
+        "area": "Lower Stoney Creek",
+        "point": [
+            -79.64643474206153,
+            43.210406610600884
+        ]
+    },
+    {
+        "name": "Woodburn Ball Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.7411880844467,
+            43.14718693262245
+        ]
+    },
+    {
+        "name": "Woodburn Ball Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.74163608353228,
+            43.14680852875077
+        ]
+    },
+    {
+        "name": "Woodburn Ball Park",
+        "type": "Baseball",
+        "area": "Glanbrook",
+        "point": [
+            -79.74152402863305,
+            43.146325952728496
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95165387507672,
+            43.273034211299574
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95020929478859,
+            43.273281518758004
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95117697785383,
+            43.27230436837503
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Baseball",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95091226742838,
+            43.27143341869877
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Tennis",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95012537704281,
+            43.27206226323932
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Tennis",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95029537488625,
+            43.27213790318346
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Tennis",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95009441127043,
+            43.27244004113778
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Tennis",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95024343818463,
+            43.272515488657014
+        ]
+    },
+    {
+        "name": "Dundas Driving Park",
+        "type": "Tennis",
+        "area": "West Hamilton/Dundas",
+        "point": [
+            -79.95041352644147,
+            43.27258602096075
+        ]
+    },
+    {
+        "name": "Tapleytown Men's Club Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.73976180859498,
+            43.18498348194924
+        ]
+    },
+    {
+        "name": "Tapleytown Men's Club Park",
+        "type": "Baseball",
+        "area": "Upper Stoney Creek",
+        "point": [
+            -79.74001422687854,
+            43.18401116614425
+        ]
+    }
+]
