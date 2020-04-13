@@ -1,6 +1,6 @@
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
-import "./app.css";
+import "../styles/app.css";
 import axios from 'axios';
 import Select from 'react-select';
 

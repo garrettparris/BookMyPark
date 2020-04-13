@@ -1,12 +1,13 @@
 import React from 'react';
-import CustomMap from './components/Map'
-import SearchAppBar from './components/AppBar.js'
+import CustomMap from './Map'
+import SearchAppBar from './AppBar.js'
 import HomeIcon from "@material-ui/icons/Home";
 import ReceiptIcon from "@material-ui/icons/Receipt";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
 import SettingsIcon from "@material-ui/icons/Settings";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./Sidebar";
+
 function onClick(e, item) {
   window.alert(JSON.stringify(item, null, 2));
 }

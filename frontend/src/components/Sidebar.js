@@ -6,8 +6,8 @@ import Divider from "@material-ui/core/Divider";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import Collapse from "@material-ui/core/Collapse";
-import "./app.css";
-import logo from "./images/hammercity.jpg"
+import "../styles/app.css";
+import logo from "../assests/images/hammercity.jpg"
 function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
   const [collapsed, setCollapsed] = React.useState(true);
   const { label, items, Icon, onClick: onClickProp } = item;
