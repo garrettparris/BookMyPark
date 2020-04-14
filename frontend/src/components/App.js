@@ -1,12 +1,12 @@
 import React from 'react';
 import CustomMap from './Map'
-import SearchAppBar from './AppBar.js'
+import NavBar from './AppBar.js'
 import HomeIcon from "@material-ui/icons/Home";
 import ReceiptIcon from "@material-ui/icons/Receipt";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
-import SettingsIcon from "@material-ui/icons/Settings";
+import LanguageIcon from '@material-ui/icons/Language';
 import Sidebar from "./Sidebar";
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import ExploreIcon from '@material-ui/icons/Explore';
 
 function onClick(e, item) {
   window.alert(JSON.stringify(item, null, 2));
@@ -15,56 +15,51 @@ function onClick(e, item) {
 const items = [
   { name: "home", label: "Home", Icon: HomeIcon },
   {
-    name: "billing",
-    label: "Billing",
-    Icon: ReceiptIcon,
+    name: "acount",
+    label: "Acount",
+    Icon: LanguageIcon,
     items: [
-      { name: "statements", label: "Statements", onClick },
-      { name: "reports", label: "Reports", onClick }
+      { name: "statements", label: "Govt. Id", onClick },
+      { name: "reports", label: "Porfile", onClick },
+      { name: "reports", label: "COVID-19 Profile", onClick },
+      { name: "reports", label: "Preferences", onClick }
     ]
   },
-  "divider",
   {
-    name: "settings",
-    label: "Settings",
-    Icon: SettingsIcon,
+    name: "privacy",
+    label: "Privacy",
+    Icon: VerifiedUserIcon,
     items: [
-      { name: "profile", label: "Profile" },
-      { name: "insurance", label: "Insurance", onClick },
-      "divider",
-      {
-        name: "notifications",
-        label: "Notifications",
-        Icon: NotificationsIcon,
-        items: [
-          { name: "email", label: "Email", onClick },
-          {
-            name: "desktop",
-            label: "Desktop",
-            Icon: DesktopWindowsIcon,
-            items: [
-              { name: "schedule", label: "Schedule" },
-              { name: "frequency", label: "Frequency" }
-            ]
-          },
-          { name: "sms", label: "SMS" }
-        ]
-      }
+      { name: "statements", label: "Govt. Id", onClick }
+    ]
+  },
+  {
+    name: "acount",
+    label: "Open Amenities Today",
+    Icon: ExploreIcon,
+    items: [
+      { name: "statements", label: "Govt. Id", onClick }
     ]
   }
 ];
 
-function App() {
-  return (
-    <div className="App">
-      <div className='mx-auto w-50'>
-        <SearchAppBar />
-        <CustomMap />
-        <Sidebar items = {items} />
- 
+class App extends React.Component {
+
+  render(){
+    return (
+      <div className="App">
+  
+        <div className='app-nav'>
+          <NavBar />
+        </div>
+        <div className='app-body'>
+          <Sidebar items={items} />
+          <CustomMap />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  
 }
 
 export default App;

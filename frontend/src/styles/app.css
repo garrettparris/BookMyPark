@@ -1,25 +1,31 @@
+.app-body{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  min-height: 95vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 .leaflet-container {
-    width: 50vw;
-    height: 65vh;
-    margin-left: 25vw;
-    margin-top: 25vh;
-    display: flex;
-    position: absolute;
-    border: 1px
-  }
-  .sidebar {
-    max-width: 25vw;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  .logo {
-    width: 200px;
-    height: 200px;
-  }
-  .imgcontainer{
-    text-align: center;
-  }
-  .selectdropdown{
-    float: right;
-    width: 25vw;
-    margin-left: 25vw;
-  }
+  margin-top: 60px;
+  margin-left: 10px;
+  width: 95%;
+  height: 65vh;
+  border: 1px
+}
+.sidebar {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.logo {
+  width: 200px;
+  height: 200px;
+}
+.imgcontainer{
+  text-align: center;
+}
+.selectdropdown{
+  float: right;
+  width: 25vw;
+  margin-left: 25vw;
+}
