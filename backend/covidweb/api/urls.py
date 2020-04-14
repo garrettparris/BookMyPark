@@ -4,6 +4,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'locations', views.LocationViewSet)
+router.register(r'bookings', views.BookingViewSet)
 
 
 urlpatterns = [
