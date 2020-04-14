@@ -3,6 +3,13 @@ import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import "../styles/app.css";
 import axios from 'axios';
 import Select from 'react-select';
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from "@material-ui/core/DialogContent";
+import { Button } from "@material-ui/core";
+import MenuItem from '@material-ui/core/MenuItem';
+
 
 const options = [
     { value: 'Basketball', label: 'Basketball' },
@@ -11,29 +18,43 @@ const options = [
     { value: 'Tennis', label: 'Tennis' },
     { value: 'Playground', label: 'Playground' },
 
-  ];
-  
+];
+
 class CustomMap extends React.Component {
     state = {
         markers: [],
         activePark: null,
-        selectedOption: null,
-        filteredmarkers:[]
+        selectedOption: [],
+        filteredmarkers: [],
+        open: false,
+        userName: '',
+        userPhoneNumber: '',
+        userEmail: '',
+        userTimeRange: '',
+        errorMessage: "Phone Number is invalid",
+        error: false,
+
     }
+
     handleChange = selectedOption => {
-        this.setState(
-            { selectedOption },
-            () => console.log(`Option selected:`, this.state.selectedOption.value)
-          );
-        let temp = this.state.markers.filter(function (marker) {
-            return marker.type == selectedOption.value
-        })
-        this.setState(
-            {filteredmarkers: temp}
-        )
-        console.log(temp)
-        
-      };
+        this.setState({selectedOption:selectedOption});
+        if (selectedOption === null || selectedOption.length === 0){
+            this.setState({ filteredmarkers: this.state.markers });     
+        }else{
+            let array = [];
+            selectedOption.forEach(element => {
+                console.log(element);
+                let temp = this.state.markers.filter(function (marker) {
+                   
+                        return marker.type == element.value
+                    })
+                
+                array = array.concat(temp);
+            });
+            this.setState({filteredmarkers:array});
+        }
+    };
+
     callAPI() {
         try {
             var url = 'http://localhost:8000/locations/'
@@ -43,87 +64,165 @@ class CustomMap extends React.Component {
                     const data = res.data
                     this.setState({
                         markers: data,
-                        filteredmarkers:data,
+                        filteredmarkers: data,
                     })
                 })
-                
-
         } catch (err) {
             console.error(err)
         }
     }
-    componentDidMount() {
-        this.callAPI()
-    }
-    setActivePark(park) {
-        this.setState({
-            activePark:park
-        })
-    }
-    render() {
-        const { selectedOption } = this.state;
 
+    componentDidMount() {
+        this.callAPI();
+    }
+
+    setActivePark(park) {
+        this.setState({ activePark: park });
+    }
+
+    handleClickOpen = () => {
+        this.setState({ open: true });
+    };
+
+    handleClose = () => {
+        this.setState({ open: false });
+    };
+    handleNameChange = e => {
+        this.setState({ userName: e.target.value });
+    }
+    handleEmailChange = e => {
+        this.setState({ userEmail: e.target.value });
+    }
+    handlePhoneNumberChange = e => {
+        this.setState({ userPhoneNumber: e.target.value });
+    }
+    handleTimeChange = e => {
+        this.setState({ userTimeRange: e.target.value });
+    }
+    sendSMS = () => {
+        console.log("User Name: ", this.state.userName);
+        console.log("User Phone Number: ", this.state.userPhoneNumber);
+        console.log("User Email: ", this.state.userEmail);
+        console.log("Time Range: ", this.state.userTimeRange);
+        this.phoneValidation(this.state.userPhoneNumber);
+    }
+
+    phoneValidation = (num) => {
+        const access = "access_key=647f13bbd61ccd38b02c4c04004f7273";
+        const number = "number=" + num;
+        const country = "country_code=CA";
+        const format = "format=1";
+        try {
+            var url = 'http://apilayer.net/api/validate?' + access + '&' + number + "&" + country + "&" + format;
+            console.log('phone valid')
+            axios.post(url)
+                .then(res => {
+                    console.log(res.data.valid);
+                    if (res.data.valid) {
+                        this.setState({ error: false });
+                    } else {
+                        this.setState({ error: true });
+                    }
+                })
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
+    render() {
+        const { open, errorMessage, error } = this.state;
+        const timeRange = ["10am - 11am", "11am - 12pm", "12pm - 1pm", "1pm - 2pm", "2pm - 3pm", "3pm -4pm"];
         return (
             <div>
-
+                <div style={{ width:'50%', position: "absolute", zIndex:'1000', marginTop:'10px', marginLeft:"20px", display:'grid', gridTemplateColumns:'200px auto'}}>
+                <div style={{marginTop:'10px', marginLeft:'10px'}}>Select the amenities: </div>
+                <Select
+                    isMulti
+                    defaultValue={[]}
+                    options={options}
+                    onChange={this.handleChange}
+                    className="basic-multi-select"
+                    classNamePrefix="select"
+                />
+                </div>
                 <Map center={[43.2557, -79.8711]} zoom={12}>
                     {this.state.activePark && (
                         <Popup
-                        position={[
-                            this.state.activePark.latitude,
-                            this.state.activePark.longitude
-                        ]}
-                        onClose={() => {
-                            this.setActivePark(null);
-                        }}
+                            position={[
+                                this.state.activePark.latitude,
+                                this.state.activePark.longitude
+                            ]}
+                            onClose={() => {
+                                this.setActivePark(null);
+                            }}
                         >
                             <div>
-                            <h2>{this.state.activePark.name}</h2>
-                            <p>{this.state.activePark.type} amenity available 10am-4pm</p>
-                                
-                            <button
-                                onClick={() => {
-                                    console.log(this.state.activePark);
-                                }}>
+                                <h2>{this.state.activePark.name}</h2>
+                                <p>{this.state.activePark.type} amenity available 10am-4pm</p>
+
+                                <button
+                                    onClick={() => {
+                                        console.log(this.state.activePark);
+                                        this.setState({ open: true });
+                                    }}>
                                     book this
-                            </button>
-                        </div>
+                                </button>
+                            </div>
                         </Popup>
-                        )}
+                    )}
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     />
-                    {/* Basketball Baseball Tennis Playground Soccer */}
                     <div>
-                    
+
                     </div>
-                    {this.state.filteredmarkers.map((park,index) => (
+                    {this.state.filteredmarkers.map((park, index) => (
                         <Marker
-                        key={index}
-                        position={[
-                            park.latitude,
-                            park.longitude,
-                            
-                        ]}
-                        onClick={() => {
-                            this.setActivePark(park);
+                            key={index}
+                            position={[
+                                park.latitude,
+                                park.longitude,
+
+                            ]}
+                            onClick={() => {
+                                this.setActivePark(park);
                             }}
-                            
+
                         />
-    
+
                     ))}
                 </Map>
-                <Select
-        value={selectedOption}
-        onChange={this.handleChange}
-                    options={options}
-                    className='selectdropdown'
-      />
+
+                {open && <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" open={open}>
+                    <DialogTitle id="simple-dialog-title" style={{ textAlign: 'center', paddingBottom: '0', marginTop: '10px' }}>{this.state.activePark.name}</DialogTitle>
+                    <DialogContent style={{ width: '550px', textAlign: 'center' }}>
+
+                        <hr />
+                        <TextField id="standard-basic" label="Name" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNameChange} /><br />
+                        <TextField id="standard-basic" label="Phone Number" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handlePhoneNumberChange} /><br />
+                        <TextField id="standard-basic" label="Email" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleEmailChange} /><br />
+                        <TextField select style={{ width: '60%', marginBottom: '10px' }} label="Time Range"
+                            value={this.state.userTimeRange}
+                            onChange={this.handleTimeChange}
+                        >
+                            {timeRange.map((option) => (
+                                <MenuItem key={option} value={option}>
+                                    {option}
+                                </MenuItem>
+                            ))}
+                        </TextField><br />
+                        <br />
+                        {error && (<div style={{ color: "red" }}>{errorMessage}<br /><br /></div>)}
+                        <Button variant="contained" color="primary" onClick={this.sendSMS}>Book This Place</Button>
+                        <br /><br />
+                    </DialogContent>
+
+                </Dialog>}
             </div>
         )
     }
-
 }
+
 
 export default CustomMap
