@@ -9,8 +9,11 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from "@material-ui/core/DialogContent";
 import { Button } from "@material-ui/core";
 import MenuItem from '@material-ui/core/MenuItem';
+import DatePicker from "react-datepicker";
+import { TimePicker } from 'antd';
+import moment from 'moment';
 
-
+import "react-datepicker/dist/react-datepicker.css";
 const options = [
     { value: 'Basketball', label: 'Basketball' },
     { value: 'Baseball', label: 'Baseball' },
@@ -30,9 +33,12 @@ class CustomMap extends React.Component {
         userName: '',
         userPhoneNumber: '',
         userEmail: '',
-        userTimeRange: '',
+        startTime: '',
+        endTime: '',
+        date: new Date(),
         errorMessage: "Phone Number is invalid",
         error: false,
+        response: ''
 
     }
 
@@ -90,6 +96,16 @@ class CustomMap extends React.Component {
     handleNameChange = e => {
         this.setState({ userName: e.target.value });
     }
+    // gggg
+    handleStartChange = e => {
+        this.setState({ startTime: e.target.value });
+    }
+    handleEndChange = e => {
+        this.setState({ endTime: e.target.value });
+    }
+    handleDateChange = e => {
+        this.setState({ date: e});
+    }
     handleEmailChange = e => {
         this.setState({ userEmail: e.target.value });
     }
@@ -99,12 +115,44 @@ class CustomMap extends React.Component {
     handleTimeChange = e => {
         this.setState({ userTimeRange: e.target.value });
     }
+    // auth token
+    // 8654eda474d9fd24724232f8fd25d6ae
     sendSMS = () => {
-        console.log("User Name: ", this.state.userName);
-        console.log("User Phone Number: ", this.state.userPhoneNumber);
-        console.log("User Email: ", this.state.userEmail);
-        console.log("Time Range: ", this.state.userTimeRange);
-        this.phoneValidation(this.state.userPhoneNumber);
+        var url = "http://localhost:8000/bookings/"
+        try {
+            this.phoneValidation(this.state.userPhoneNumber);
+            
+            axios({
+            method: 'post',
+            url: url,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+                data: {
+                    location: 'http://localhost:8000/locations/' + this.state.activePark.id+'/',
+                    start: '3:00' ,
+                    end: '4:00',
+                    date: this.state.date,
+                    name: this.state.userName,
+                    phone_number: this.state.userPhoneNumber,
+                    email: this.state.userEmail,
+            }
+            
+            })
+            .catch(error => {
+                try { this.setState({
+                response: error.response.data
+                })} catch (err) {
+                console.log(err)
+                }
+                
+                console.log(this.state.errors)
+            })
+        } catch (err) {
+            
+            console.log(err.response)
+            }
+
     }
 
     phoneValidation = (num) => {
@@ -112,6 +160,7 @@ class CustomMap extends React.Component {
         const number = "number=" + num;
         const country = "country_code=CA";
         const format = "format=1";
+
         try {
             var url = 'http://apilayer.net/api/validate?' + access + '&' + number + "&" + country + "&" + format;
             console.log('phone valid')
@@ -132,6 +181,7 @@ class CustomMap extends React.Component {
     render() {
         const { open, errorMessage, error } = this.state;
         const timeRange = ["10am - 11am", "11am - 12pm", "12pm - 1pm", "1pm - 2pm", "2pm - 3pm", "3pm -4pm"];
+
         return (
             <div>
                 <div style={{ width:'50%', position: "absolute", zIndex:'1000', marginTop:'10px', marginLeft:"20px", display:'grid', gridTemplateColumns:'200px auto'}}>
@@ -159,14 +209,11 @@ class CustomMap extends React.Component {
                             <div>
                                 <h2>{this.state.activePark.name}</h2>
                                 <p>{this.state.activePark.type} amenity available 10am-4pm</p>
+                                <Button variant="contained" color="primary" onClick={() => {
+                                    console.log(this.state.activePark)
+                                    this.setState({open:true})
+                                }}>Book This Place</Button>
 
-                                <button
-                                    onClick={() => {
-                                        console.log(this.state.activePark);
-                                        this.setState({ open: true });
-                                    }}>
-                                    book this
-                                </button>
                             </div>
                         </Popup>
                     )}
@@ -202,6 +249,14 @@ class CustomMap extends React.Component {
                         <TextField id="standard-basic" label="Name" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNameChange} /><br />
                         <TextField id="standard-basic" label="Phone Number" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handlePhoneNumberChange} /><br />
                         <TextField id="standard-basic" label="Email" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleEmailChange} /><br />
+                        <div>
+                        <DatePicker
+                            style={{ width: '60%', marginBottom: '10px' }}
+                            selected={this.state.date}
+                            onChange={this.handleDateChange}
+                        />
+                        </div>
+                       
                         <TextField select style={{ width: '60%', marginBottom: '10px' }} label="Time Range"
                             value={this.state.userTimeRange}
                             onChange={this.handleTimeChange}
@@ -212,6 +267,8 @@ class CustomMap extends React.Component {
                                 </MenuItem>
                             ))}
                         </TextField><br />
+                      
+
                         <br />
                         {error && (<div style={{ color: "red" }}>{errorMessage}<br /><br /></div>)}
                         <Button variant="contained" color="primary" onClick={this.sendSMS}>Book This Place</Button>

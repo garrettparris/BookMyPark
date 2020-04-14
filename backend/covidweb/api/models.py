@@ -14,11 +14,11 @@ class Location(models.Model):
         return self.name + ' ' + self.type
 class Booking(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    start = models.TimeField()
-    end = models.TimeField()
+    start = models.CharField(max_length=10)
+    end = models.CharField(max_length=10)
     date = models.DateField()
     name = models.CharField(max_length=25)
-    phone_number = PhoneNumberField()
+    phone_number = models.CharField(max_length=15)
     email = models.EmailField(max_length=254)
     def __str__(self):
         return self.name
