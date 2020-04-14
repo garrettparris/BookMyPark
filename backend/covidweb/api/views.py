@@ -19,7 +19,7 @@ def send_message(request):
     location_name = jsondata['name']
     location_type = jsondata['type']
     account_sid = 'ACdc82aab8d58ebbe4fdb15e1b84958065' 
-    auth_token = '8654eda474d9fd24724232f8fd25d6ae'
+    auth_token = '47f948fbd52881a32bf1da463ee04738'
     client = Client(account_sid, auth_token)
     message = client.messages.create( 
                               from_='+18509403611',

@@ -63,7 +63,7 @@ class CustomMap extends React.Component {
 
     callAPI() {
         try {
-            var url = 'http://localhost:8000/locations/'
+            var url = 'http://localhost:8080/locations/'
             console.log('call api')
             axios.get(url)
                 .then(res => {
@@ -118,7 +118,7 @@ class CustomMap extends React.Component {
     // auth token
     // 8654eda474d9fd24724232f8fd25d6ae
     sendSMS = () => {
-        var url = "http://localhost:8000/bookings/"
+        var url = "http://localhost:8080/bookings/"
         try {
             this.phoneValidation(this.state.userPhoneNumber);
             
