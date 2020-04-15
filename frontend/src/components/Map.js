@@ -29,7 +29,8 @@ class CustomMap extends React.Component {
         activePark: null,
         selectedOption: [],
         filteredmarkers: [],
-        open: false,
+        open1: false,
+        open1: false,
         userName: '',
         userPhoneNumber: '',
         userEmail: '',
@@ -43,21 +44,21 @@ class CustomMap extends React.Component {
     }
 
     handleChange = selectedOption => {
-        this.setState({selectedOption:selectedOption});
-        if (selectedOption === null || selectedOption.length === 0){
-            this.setState({ filteredmarkers: this.state.markers });     
-        }else{
+        this.setState({ selectedOption: selectedOption });
+        if (selectedOption === null || selectedOption.length === 0) {
+            this.setState({ filteredmarkers: this.state.markers });
+        } else {
             let array = [];
             selectedOption.forEach(element => {
                 console.log(element);
                 let temp = this.state.markers.filter(function (marker) {
-                   
-                        return marker.type == element.value
-                    })
-                
+
+                    return marker.type == element.value
+                })
+
                 array = array.concat(temp);
             });
-            this.setState({filteredmarkers:array});
+            this.setState({ filteredmarkers: array });
         }
     };
 
@@ -86,12 +87,19 @@ class CustomMap extends React.Component {
         this.setState({ activePark: park });
     }
 
-    handleClickOpen = () => {
-        this.setState({ open: true });
+    handleClickopen1 = () => {
+        this.setState({ open1: true });
     };
 
     handleClose = () => {
-        this.setState({ open: false });
+        this.setState({ open1: false });
+    };
+    handleClickopen2 = () => {
+        this.setState({ open2: true });
+    };
+
+    handleClose2 = () => {
+        this.setState({ open2: false });
     };
     handleNameChange = e => {
         this.setState({ userName: e.target.value });
@@ -104,7 +112,7 @@ class CustomMap extends React.Component {
         this.setState({ endTime: e.target.value });
     }
     handleDateChange = e => {
-        this.setState({ date: e});
+        this.setState({ date: e });
     }
     handleEmailChange = e => {
         this.setState({ userEmail: e.target.value });
@@ -121,37 +129,33 @@ class CustomMap extends React.Component {
         var url = "http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/bookings/"
         try {
             this.phoneValidation(this.state.userPhoneNumber);
-            
+
             axios({
-            method: 'post',
-            url: url,
-            headers: {
-                'Content-Type': 'application/json',
-            },
+                method: 'post',
+                url: url,
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 data: {
-                    location: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/' + this.state.activePark.id+'/',
-                    start: '3:00' ,
+                    location: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/' + this.state.activePark.id + '/',
+                    start: '3:00',
                     end: '4:00',
                     date: this.state.date,
                     name: this.state.userName,
                     phone_number: this.state.userPhoneNumber,
                     email: this.state.userEmail,
-            }
-            
-            })
-            .catch(error => {
-                try { this.setState({
-                response: error.response.data
-                })} catch (err) {
-                console.log(err)
                 }
-                
-                console.log(this.state.errors)
+            }).then((res)=>{
+                console.log(res);
+            }).catch(error => {
+                console.log(error);
             })
         } catch (err) {
-            
             console.log(err.response)
-            }
+        }
+
+        this.handleClickopen2();
+        this.handleClose();
 
     }
 
@@ -160,7 +164,6 @@ class CustomMap extends React.Component {
         const number = "number=" + num;
         const country = "country_code=CA";
         const format = "format=1";
-
         try {
             var url = 'http://apilayer.net/api/validate?' + access + '&' + number + "&" + country + "&" + format;
             console.log('phone valid')
@@ -179,21 +182,21 @@ class CustomMap extends React.Component {
     }
 
     render() {
-        const { open, errorMessage, error } = this.state;
+        const { open1, errorMessage, error, open2 } = this.state;
         const timeRange = ["10am - 11am", "11am - 12pm", "12pm - 1pm", "1pm - 2pm", "2pm - 3pm", "3pm -4pm"];
 
         return (
             <div>
-                <div style={{ width:'50%', position: "absolute", zIndex:'1000', marginTop:'10px', marginLeft:"20px", display:'grid', gridTemplateColumns:'200px auto'}}>
-                <div style={{marginTop:'10px', marginLeft:'10px'}}>Select the amenities: </div>
-                <Select
-                    isMulti
-                    defaultValue={[]}
-                    options={options}
-                    onChange={this.handleChange}
-                    className="basic-multi-select"
-                    classNamePrefix="select"
-                />
+                <div style={{ width: '50%', position: "absolute", zIndex: '1000', marginTop: '10px', marginLeft: "20px", display: 'grid', gridTemplateColumns: '200px auto' }}>
+                    <div style={{ marginTop: '10px', marginLeft: '10px' }}>Select the amenities: </div>
+                    <Select
+                        isMulti
+                        defaultValue={[]}
+                        options={options}
+                        onChange={this.handleChange}
+                        className="basic-multi-select"
+                        classNamePrefix="select"
+                    />
                 </div>
                 <Map center={[43.2557, -79.8711]} zoom={12}>
                     {this.state.activePark && (
@@ -211,7 +214,7 @@ class CustomMap extends React.Component {
                                 <p>{this.state.activePark.type} amenity available 10am-4pm</p>
                                 <Button variant="contained" color="primary" onClick={() => {
                                     console.log(this.state.activePark)
-                                    this.setState({open:true})
+                                    this.setState({ open1: true })
                                 }}>Book This Place</Button>
 
                             </div>
@@ -241,7 +244,7 @@ class CustomMap extends React.Component {
                     ))}
                 </Map>
 
-                {open && <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" open={open}>
+                {open1 && <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" open={open1}>
                     <DialogTitle id="simple-dialog-title" style={{ textAlign: 'center', paddingBottom: '0', marginTop: '10px' }}>{this.state.activePark.name}</DialogTitle>
                     <DialogContent style={{ width: '550px', textAlign: 'center' }}>
 
@@ -250,13 +253,13 @@ class CustomMap extends React.Component {
                         <TextField id="standard-basic" label="Phone Number" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handlePhoneNumberChange} /><br />
                         <TextField id="standard-basic" label="Email" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleEmailChange} /><br />
                         <div>
-                        <DatePicker
-                            style={{ width: '60%', marginBottom: '10px' }}
-                            selected={this.state.date}
-                            onChange={this.handleDateChange}
-                        />
+                            <DatePicker
+                                style={{ width: '60%', marginBottom: '10px' }}
+                                selected={this.state.date}
+                                onChange={this.handleDateChange}
+                            />
                         </div>
-                       
+
                         <TextField select style={{ width: '60%', marginBottom: '10px' }} label="Time Range"
                             value={this.state.userTimeRange}
                             onChange={this.handleTimeChange}
@@ -267,14 +270,20 @@ class CustomMap extends React.Component {
                                 </MenuItem>
                             ))}
                         </TextField><br />
-                      
+
 
                         <br />
                         {error && (<div style={{ color: "red" }}>{errorMessage}<br /><br /></div>)}
                         <Button variant="contained" color="primary" onClick={this.sendSMS}>Book This Place</Button>
                         <br /><br />
                     </DialogContent>
+                </Dialog>}
 
+                {open2 && <Dialog onClose={this.handleClose2} aria-labelledby="simple-dialog-title" open={open2}>
+                <DialogContent style={{ width: '550px', textAlign: 'center', marginTop:'50px'}}>
+                    Booking Successful!<br/><br/>
+                    <Button variant="contained" color="primary" onClick={this.handleClose2} style={{width:'50%', marginBottom:'50px'}}>OK !</Button>
+                </DialogContent>
                 </Dialog>}
             </div>
         )
