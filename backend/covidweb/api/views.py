@@ -46,4 +46,4 @@ class BookingViewSet(viewsets.ModelViewSet):
     serializer_class = BookingSerializer
     def create(self, request, *args, **kwargs):
         my_result=send_message(request)
-        return HttpResponseRedirect('/success/')
+        return HttpResponseRedirect(status_code=200)
