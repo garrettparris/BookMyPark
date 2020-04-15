@@ -10,9 +10,10 @@ import DialogContent from "@material-ui/core/DialogContent";
 import { Button } from "@material-ui/core";
 import MenuItem from '@material-ui/core/MenuItem';
 import DatePicker from "react-datepicker";
-import { TimePicker } from 'antd';
-import moment from 'moment';
-
+import img1 from '../assests/images/1.jpg';
+import img3 from '../assests/images/3.jpg';
+import img4 from '../assests/images/4.jpg';
+import img2 from '../assests/images/img2.png';
 import "react-datepicker/dist/react-datepicker.css";
 const options = [
     { value: 'Basketball', label: 'Basketball' },
@@ -145,13 +146,13 @@ class CustomMap extends React.Component {
                     phone_number: this.state.userPhoneNumber,
                     email: this.state.userEmail,
                 }
-            }).then((res)=>{
+            }).then((res) => {
                 console.log(res);
             }).catch(error => {
                 console.log(error);
             })
         } catch (err) {
-            console.log(err.response)
+            console.log(err)
         }
 
         this.handleClickopen2();
@@ -184,11 +185,17 @@ class CustomMap extends React.Component {
     render() {
         const { open1, errorMessage, error, open2 } = this.state;
         const timeRange = ["10am - 11am", "11am - 12pm", "12pm - 1pm", "1pm - 2pm", "2pm - 3pm", "3pm -4pm"];
-
         return (
             <div>
-                <div style={{ width: '50%', position: "absolute", zIndex: '1000', marginTop: '10px', marginLeft: "20px", display: 'grid', gridTemplateColumns: '200px auto' }}>
-                    <div style={{ marginTop: '10px', marginLeft: '10px' }}>Select the amenities: </div>
+                <div style={{height:'200px', marginTop:'5px', marginLeft:"1px"}}>
+                    <div style={{backgroundColor:'rgba(1,1,1,0.05)', paddingTop:'5px', paddingBottom:'5px', paddingLeft:'20px'}}>City of Hamilton COVID-19 Updates for Apr 15th, 2020</div>
+                    <a href="https://www.hamilton.ca/coronavirus/protect-yourself-and-others"><img src={img1} alt="Protect Yourself and Others" style={{height:'100%', marginLeft:'10px'}}/></a>
+                    <a href="https://www.hamilton.ca/coronavirus/how-self-isolate"><img src={img2} alt="How to Self-Isolate" style={{height:'100%', marginLeft:'10px'}}/></a>
+                    <a href="https://www.hamilton.ca/coronavirus/affected-city-services"><img src={img3} alt="Affected City Services" style={{height:'100%', marginLeft:'10px'}}/></a>
+                    <a href="https://www.hamilton.ca/coronavirus/affected-city-services"><img src={img4} alt="Affected City Services" style={{height:'100%', marginLeft:'10px'}}/></a>
+                </div>
+                <div style={{ width: '50%', position: "absolute", zIndex: '1000', marginTop: '30px', marginLeft: "20px", display: 'grid', gridTemplateColumns: '200px auto' }}>
+                    <div style={{ marginTop: '20px', marginLeft: '10px' }}>Select the amenities: </div>
                     <Select
                         isMulti
                         defaultValue={[]}
@@ -225,41 +232,30 @@ class CustomMap extends React.Component {
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     />
                     <div>
-
                     </div>
                     {this.state.filteredmarkers.map((park, index) => (
                         <Marker
                             key={index}
-                            position={[
-                                park.latitude,
-                                park.longitude,
-
-                            ]}
-                            onClick={() => {
-                                this.setActivePark(park);
-                            }}
-
+                            position={[park.latitude, park.longitude,]}
+                            onClick={() => { this.setActivePark(park); }}
                         />
-
                     ))}
                 </Map>
 
                 {open1 && <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" open={open1}>
                     <DialogTitle id="simple-dialog-title" style={{ textAlign: 'center', paddingBottom: '0', marginTop: '10px' }}>{this.state.activePark.name}</DialogTitle>
                     <DialogContent style={{ width: '550px', textAlign: 'center' }}>
-
                         <hr />
                         <TextField id="standard-basic" label="Name" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNameChange} /><br />
                         <TextField id="standard-basic" label="Phone Number" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handlePhoneNumberChange} /><br />
                         <TextField id="standard-basic" label="Email" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleEmailChange} /><br />
                         <div>
                             <DatePicker
-                                style={{ width: '60%', marginBottom: '10px' }}
+                                style={{ width: '100%', marginBottom: '10px' }}
                                 selected={this.state.date}
                                 onChange={this.handleDateChange}
                             />
                         </div>
-
                         <TextField select style={{ width: '60%', marginBottom: '10px' }} label="Time Range"
                             value={this.state.userTimeRange}
                             onChange={this.handleTimeChange}
@@ -280,10 +276,10 @@ class CustomMap extends React.Component {
                 </Dialog>}
 
                 {open2 && <Dialog onClose={this.handleClose2} aria-labelledby="simple-dialog-title" open={open2}>
-                <DialogContent style={{ width: '550px', textAlign: 'center', marginTop:'50px'}}>
-                    Booking Successful!<br/><br/>
-                    <Button variant="contained" color="primary" onClick={this.handleClose2} style={{width:'50%', marginBottom:'50px'}}>OK !</Button>
-                </DialogContent>
+                    <DialogContent style={{ width: '550px', textAlign: 'center', marginTop: '50px' }}>
+                        Booking Successful!<br /><br />
+                        <Button variant="contained" color="primary" onClick={this.handleClose2} style={{ width: '50%', marginBottom: '50px' }}>OK !</Button>
+                    </DialogContent>
                 </Dialog>}
             </div>
         )

@@ -2,7 +2,6 @@ import React from 'react';
 import CustomMap from './Map'
 import NavBar from './AppBar.js'
 import HomeIcon from "@material-ui/icons/Home";
-import ReceiptIcon from "@material-ui/icons/Receipt";
 import LanguageIcon from '@material-ui/icons/Language';
 import Sidebar from "./Sidebar";
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';

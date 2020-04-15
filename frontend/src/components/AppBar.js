@@ -5,10 +5,12 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
+import { FaTree } from 'react-icons/fa';
+import Avatar from '@material-ui/core/Avatar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-        flexGrow: 1,
+    flexGrow: 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -66,18 +68,11 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor:'#1e88e5', paddingTop:'10px', paddingBottom:'10px'}}>
         <Toolbar>
-          {/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton> */}
-          <Typography className={classes.title} variant="h6" noWrap>
-                BookMyPark
+          <Typography className={classes.title} variant="h4" noWrap>
+            <FaTree style={{ marginBottom: '-4px', marginRight: '5px' }} />
+            BookMyPark
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -90,11 +85,11 @@ export default function SearchAppBar() {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-                      />
-            
+            />
+
           </div>
-              </Toolbar>
-              {/* <div>family</div> */}
+          <Avatar style={{backgroundColor:'orange', marginLeft:'20px'}}>N</Avatar>
+        </Toolbar>
       </AppBar>
     </div>
   );
