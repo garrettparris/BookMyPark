@@ -63,7 +63,7 @@ class CustomMap extends React.Component {
 
     callAPI() {
         try {
-            var url = 'http://localhost:8080/locations/'
+            var url = 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/'
             console.log('call api')
             axios.get(url)
                 .then(res => {
@@ -118,7 +118,7 @@ class CustomMap extends React.Component {
     // auth token
     // 8654eda474d9fd24724232f8fd25d6ae
     sendSMS = () => {
-        var url = "http://localhost:8080/bookings/"
+        var url = "http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/bookings/"
         try {
             this.phoneValidation(this.state.userPhoneNumber);
             
@@ -129,7 +129,7 @@ class CustomMap extends React.Component {
                 'Content-Type': 'application/json',
             },
                 data: {
-                    location: 'http://localhost:8000/locations/' + this.state.activePark.id+'/',
+                    location: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/' + this.state.activePark.id+'/',
                     start: '3:00' ,
                     end: '4:00',
                     date: this.state.date,
