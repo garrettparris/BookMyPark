@@ -28,7 +28,6 @@ def send_message(request):
                           ) 
  
     print(message.sid)
-    
 class LocationViewSet(viewsets.ModelViewSet):
     queryset = Location.objects.all().order_by('name')
     serializer_class = LocationSerializer
@@ -47,4 +46,4 @@ class BookingViewSet(viewsets.ModelViewSet):
     serializer_class = BookingSerializer
     def create(self, request, *args, **kwargs):
         my_result=send_message(request)
-        return HttpResponseRedirect(status_code=200)
+        return HttpResponseRedirect('/success/')
