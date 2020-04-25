@@ -6,6 +6,7 @@ import LanguageIcon from '@material-ui/icons/Language';
 import Sidebar from "./Sidebar";
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ExploreIcon from '@material-ui/icons/Explore';
+import { useMediaQuery } from 'react-responsive'
 
 function onClick(e, item) {
   window.alert(JSON.stringify(item, null, 2));
@@ -14,12 +15,12 @@ function onClick(e, item) {
 const items = [
   { name: "home", label: "Home", Icon: HomeIcon },
   {
-    name: "acount",
-    label: "Acount",
+    name: "account",
+    label: "Account",
     Icon: LanguageIcon,
     items: [
       { name: "statements", label: "Govt. Id", onClick },
-      { name: "reports", label: "Porfile", onClick },
+      { name: "reports", label: "Profile", onClick },
       { name: "reports", label: "COVID-19 Profile", onClick },
       { name: "reports", label: "Preferences", onClick }
     ]
@@ -47,14 +48,11 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-  
+        
         <div className='app-nav'>
           <NavBar />
         </div>
-        <div className='app-body'>
-          <Sidebar items={items} />
-          <CustomMap />
-        </div>
+
       </div>
     );
   }

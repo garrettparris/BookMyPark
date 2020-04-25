@@ -86,9 +86,11 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
 
 function Sidebar({ items, depthStep, depth, expanded }) {
   return (
-    <div className="sidebar">
+    <div className="sidebar" style = {{paddingTop:'64px'}}>
       <div className='imgcontainer'>
-        <img src={logo} className='logo'></img>
+        <a href="https://www.hamilton.ca/">
+          <img src={logo} className='logo'></img>
+        </a>
       </div>
       <List disablePadding dense>
         {items.map((sidebarItem, index) => (

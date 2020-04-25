@@ -10,20 +10,34 @@ import DialogContent from "@material-ui/core/DialogContent";
 import { Button } from "@material-ui/core";
 import MenuItem from '@material-ui/core/MenuItem';
 import DatePicker from "react-datepicker";
-import img1 from '../assests/images/1.jpg';
-import img3 from '../assests/images/3.jpg';
-import img4 from '../assests/images/4.jpg';
-import img2 from '../assests/images/img2.png';
+import Grid from '@material-ui/core/Grid';
+import { connect,mapDispatchToProps } from 'react-redux';
+import PropTypes from 'prop-types';
+import { login } from '../actions/index';
 import "react-datepicker/dist/react-datepicker.css";
+import { makeStyles } from '@material-ui/core/styles';
+
 const options = [
     { value: 'Basketball', label: 'Basketball' },
     { value: 'Baseball', label: 'Baseball' },
     { value: 'Soccer', label: 'Soccer' },
     { value: 'Tennis', label: 'Tennis' },
     { value: 'Playground', label: 'Playground' },
+    { value: 'Garden', label: 'Garden'},
+
 
 ];
-
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+    paper: {
+      padding: theme.spacing(2),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+    },
+  }));
+  
 class CustomMap extends React.Component {
     state = {
         markers: [],
@@ -53,8 +67,8 @@ class CustomMap extends React.Component {
             selectedOption.forEach(element => {
                 console.log(element);
                 let temp = this.state.markers.filter(function (marker) {
-
-                    return marker.type == element.value
+                    console.log(marker.area)
+                    return marker.type == element.value && marker.area != 'Muskoka' && marker.area != 'Orangeville'
                 })
 
                 array = array.concat(temp);
@@ -64,12 +78,15 @@ class CustomMap extends React.Component {
     };
 
     callAPI() {
+
         try {
             var url = 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/'
             console.log('call api')
             axios.get(url)
                 .then(res => {
-                    const data = res.data
+                    const data  = res.data.filter(function (marker) {
+                        return marker.area != 'Muskoka' && marker.area != 'Orangeville'
+                    })
                     this.setState({
                         markers: data,
                         filteredmarkers: data,
@@ -105,7 +122,6 @@ class CustomMap extends React.Component {
     handleNameChange = e => {
         this.setState({ userName: e.target.value });
     }
-    // gggg
     handleStartChange = e => {
         this.setState({ startTime: e.target.value });
     }
@@ -122,14 +138,14 @@ class CustomMap extends React.Component {
         this.setState({ userPhoneNumber: e.target.value });
     }
     handleTimeChange = e => {
-        this.setState({ userTimeRange: e.target.value });
+        const time = e.target.value;
+        this.setState({ startTime: time });
+        this.setState({ endTime: time+1 });
     }
-    // auth token
-    // 8654eda474d9fd24724232f8fd25d6ae
+
     sendSMS = () => {
         var url = "http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/bookings/"
         try {
-            this.phoneValidation(this.state.userPhoneNumber);
 
             axios({
                 method: 'post',
@@ -139,8 +155,8 @@ class CustomMap extends React.Component {
                 },
                 data: {
                     location: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/' + this.state.activePark.id + '/',
-                    start: '3:00',
-                    end: '4:00',
+                    start: this.state.startTime + ':00',
+                    end: this.state.endTime + ':00',
                     date: this.state.date,
                     name: this.state.userName,
                     phone_number: this.state.userPhoneNumber,
@@ -160,53 +176,40 @@ class CustomMap extends React.Component {
 
     }
 
-    phoneValidation = (num) => {
-        const access = "access_key=5cdbdecb3c85fe4c1227071cf2a14415";
-        const number = "number=" + num;
-        const country = "country_code=CA";
-        const format = "format=1";
-        try {
-            var url = 'http://apilayer.net/api/validate?' + access + '&' + number + "&" + country + "&" + format;
-            console.log('phone valid')
-            axios.post(url)
-                .then(res => {
-                    console.log(res.data.valid);
-                    if (res.data.valid) {
-                        this.setState({ error: false });
-                    } else {
-                        this.setState({ error: true });
-                    }
-                })
-        } catch (err) {
-            console.error(err)
-        }
-    }
-
     render() {
+
         const { open1, errorMessage, error, open2 } = this.state;
-        const timeRange = ["10am - 11am", "11am - 12pm", "12pm - 1pm", "1pm - 2pm", "2pm - 3pm", "3pm -4pm"];
+        const timeRange = [10, 11, 12, 13, 14, 15];
         return (
-            <div>
-                <div style={{height:'200px', marginTop:'5px', marginLeft:"1px"}}>
-                    <div style={{backgroundColor:'rgba(1,1,1,0.05)', paddingTop:'5px', paddingBottom:'5px', paddingLeft:'20px'}}>City of Hamilton COVID-19 Updates for Apr 15th, 2020</div>
-                    <a href="https://www.hamilton.ca/coronavirus/protect-yourself-and-others"><img src={img1} alt="Protect Yourself and Others" style={{height:'100%', marginLeft:'10px'}}/></a>
-                    <a href="https://www.hamilton.ca/coronavirus/how-self-isolate"><img src={img2} alt="How to Self-Isolate" style={{height:'100%', marginLeft:'10px'}}/></a>
-                    <a href="https://www.hamilton.ca/coronavirus/affected-city-services"><img src={img3} alt="Affected City Services" style={{height:'100%', marginLeft:'10px'}}/></a>
-                    <a href="https://www.hamilton.ca/coronavirus/affected-city-services"><img src={img4} alt="Affected City Services" style={{height:'100%', marginLeft:'10px'}}/></a>
-                </div>
-                <div style={{ width: '50%', position: "absolute", zIndex: '1000', marginTop: '30px', marginLeft: "20px", display: 'grid', gridTemplateColumns: '200px auto' }}>
-                    <div style={{ marginTop: '20px', marginLeft: '10px' }}>Select the amenities: </div>
-                    <Select
-                        isMulti
-                        defaultValue={[]}
-                        options={options}
-                        onChange={this.handleChange}
-                        className="basic-multi-select"
-                        classNamePrefix="select"
-                    />
-                </div>
+
+            <div className={{ flexGrow: 1}}>
+                <Grid
+                container
+                direction = "column"
+                justify="center"
+                alignItems="center"
+                >
+
+{/* <div style={{ width: '50%', position: "relative", zIndex: '1000', marginTop: '30px', marginLeft: "20px", display: 'grid', gridTemplateColumns: '200px auto' }}>
+                    */}
+                    <div style={{ marginTop: '20px', marginLeft: '10px' }}>Select the amenities: </div> 
+                    <div style={{width:'50vw', zIndex:'999'}}>
+                        <Select
+                            isMulti
+                            defaultValue={[]}
+                            options={options}
+                            onChange={this.handleChange}
+
+                            className="basic-multi-select"
+                            classNamePrefix="select"
+                        />
+                    </div>
+                        
+                    
+                {/* </div> */}
                 <Map center={[43.2557, -79.8711]} zoom={12}>
                     {this.state.activePark && (
+                        
                         <Popup
                             position={[
                                 this.state.activePark.latitude,
@@ -233,7 +236,8 @@ class CustomMap extends React.Component {
                     />
                     <div>
                     </div>
-                    {this.state.filteredmarkers.map((park, index) => (
+                        {this.state.filteredmarkers.map((park, index) => (
+                        
                         <Marker
                             key={index}
                             position={[park.latitude, park.longitude,]}
@@ -242,9 +246,13 @@ class CustomMap extends React.Component {
                     ))}
                 </Map>
 
+                    
+                </Grid>
+                
+
                 {open1 && <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" open={open1}>
                     <DialogTitle id="simple-dialog-title" style={{ textAlign: 'center', paddingBottom: '0', marginTop: '10px' }}>{this.state.activePark.name}</DialogTitle>
-                    <DialogContent style={{ width: '550px', textAlign: 'center' }}>
+                    <DialogContent style={{ width: '400px', textAlign: 'center' }}>
                         <hr />
                         <TextField id="standard-basic" label="Name" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNameChange} /><br />
                         <TextField id="standard-basic" label="Phone Number" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handlePhoneNumberChange} /><br />
@@ -262,7 +270,7 @@ class CustomMap extends React.Component {
                         >
                             {timeRange.map((option) => (
                                 <MenuItem key={option} value={option}>
-                                    {option}
+                                    {option}:00 - {option+1}:00
                                 </MenuItem>
                             ))}
                         </TextField><br />
@@ -276,7 +284,7 @@ class CustomMap extends React.Component {
                 </Dialog>}
 
                 {open2 && <Dialog onClose={this.handleClose2} aria-labelledby="simple-dialog-title" open={open2}>
-                    <DialogContent style={{ width: '550px', textAlign: 'center', marginTop: '50px' }}>
+                    <DialogContent style={{ width: '400px', textAlign: 'center', marginTop: '50px' }}>
                         Booking Successful!<br /><br />
                         <Button variant="contained" color="primary" onClick={this.handleClose2} style={{ width: '50%', marginBottom: '50px' }}>OK !</Button>
                     </DialogContent>
@@ -285,6 +293,13 @@ class CustomMap extends React.Component {
         )
     }
 }
+CustomMap.propTypes = {
+    dispatch: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+    loggedIn: state.loggedIn
+});
 
 
-export default CustomMap
+export default connect(mapStateToProps)(CustomMap);
