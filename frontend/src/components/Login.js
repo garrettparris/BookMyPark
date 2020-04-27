@@ -13,7 +13,7 @@ import {
 } from "react-bootstrap";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { loggedIn } from '../actions';
+import { login } from '../actions';
 import CreateNewAccount from "./CreateNewAccount";
 
 class LoginForm extends Component {
@@ -35,8 +35,8 @@ class LoginForm extends Component {
   };
 
     renderForgot = () => {
-        this.props.dispatch(loggedIn(true));
-        this.props.loggedIn
+        // this.props.dispatch(loggedIn(true));
+        // this.props.loggedIn
     return(
       <div>
         <p>inside of forgot! :) </p>
@@ -65,7 +65,7 @@ class LoginForm extends Component {
             <div className="alert alert-danger alert-sm">
               <button type="button" className="close" data-dismiss="alert" aria-hidden="true">×</button>
               <span className="fw-semi-bold">Error:</span> Login failed.
-              </div>
+            </div>
             <fieldset>
               <div className="form-group has-feedback required">
                 <label htmlFor="login-email" className="col-sm-5">Username or email</label>
@@ -108,7 +108,6 @@ class LoginForm extends Component {
               
             </div>
           </form>
-        
         </div>
         <a
           href="#"
@@ -204,6 +203,7 @@ class LoginForm extends Component {
           onHide={this.props.onClose}
           onSubmit={this.onSubmit}
           bsSize="large"
+          style={{paddingTop:'64px'}}
         >
           <Modal.Header closeButton={true}>
             <h2>{ this.state.mode === "login" ? "Login" : this.state.mode === "register" ? "Register" : "Forgot Password" }</h2>
@@ -221,9 +221,9 @@ class LoginForm extends Component {
 }
 
 
-Login.propTypes = {
-    dispatch: PropTypes.func.isRequired,
-};
+// Login.propTypes = {
+//     dispatch: PropTypes.func.isRequired,
+// };
 
 const mapStateToProps = (state) => ({
     loggedIn: state.loggedIn

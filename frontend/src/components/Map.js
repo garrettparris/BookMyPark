@@ -16,6 +16,7 @@ import PropTypes from 'prop-types';
 import { login } from '../actions/index';
 import "react-datepicker/dist/react-datepicker.css";
 import { makeStyles } from '@material-ui/core/styles';
+import LoginForm from './Login.js';
 
 const options = [
     { value: 'Basketball', label: 'Basketball' },
@@ -54,7 +55,8 @@ class CustomMap extends React.Component {
         date: new Date(),
         errorMessage: "Phone Number is invalid",
         error: false,
-        response: ''
+        response: '',
+        showModal : false,
 
     }
 
@@ -142,7 +144,17 @@ class CustomMap extends React.Component {
         this.setState({ startTime: time });
         this.setState({ endTime: time+1 });
     }
-
+    close = () => {
+        this.setState ({ showModal: false });
+      }
+    
+    
+    
+      open = () => {
+        this.setState ({ showModal : true});
+      }
+    
+    
     sendSMS = () => {
         var url = "http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/bookings/"
         try {
@@ -182,7 +194,11 @@ class CustomMap extends React.Component {
         const timeRange = [10, 11, 12, 13, 14, 15];
         return (
 
-            <div className={{ flexGrow: 1}}>
+            <div className={{ flexGrow: 1 }}>
+                <div styles={{ paddingTop: '80px' }}>
+                    <LoginForm showModal={this.state.showModal} onClose={this.close} />
+                </div>
+
                 <Grid
                 container
                 direction = "column"
@@ -222,10 +238,18 @@ class CustomMap extends React.Component {
                             <div>
                                 <h2>{this.state.activePark.name}</h2>
                                 <p>{this.state.activePark.type} amenity available 10am-4pm</p>
-                                <Button variant="contained" color="primary" onClick={() => {
-                                    console.log(this.state.activePark)
-                                    this.setState({ open1: true })
-                                }}>Book This Place</Button>
+                                    {
+                                        this.props.loggedIn ? (
+                                            <Button variant="contained" color="primary" onClick={() => {
+                                                console.log(this.state.activePark)
+                                                this.setState({ open1: true })
+                                            }}>Book This Place</Button>
+                                        ) : (
+                                            <Button variant="contained" color="primary" onClick={this.open}>Login</Button>
+                                        )
+                                            
+                                    }    
+                                
 
                             </div>
                         </Popup>

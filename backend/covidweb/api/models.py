@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from phonenumber_field.modelfields import PhoneNumberField
-
+from django.contrib.auth.models import AbstractUser
 class Location(models.Model):
     # access_token = models.CharField(max_lenth=100)
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -22,3 +22,7 @@ class Booking(models.Model):
     email = models.EmailField(max_length=254)
     def __str__(self):
         return self.name
+# class CustomUser(AbstractUser):
+#     fav_color = models.CharField(blank=True, max_length=120)
+
+#     # bookings = models.CharField(blank=True, max_length=120)
