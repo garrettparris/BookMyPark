@@ -27,6 +27,7 @@ def registration(request):
     res = {
         "refresh": str(refresh),
         "access": str(refresh.access_token),
+        'id': user.id
     }
     return response.Response(res, status.HTTP_201_CREATED)
 

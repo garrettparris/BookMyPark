@@ -7,6 +7,7 @@ django-cors-headers==3.2.1
 django-phonenumber-field==4.0.0
 djangorestframework==3.11.0
 djangorestframework-jwt==1.11.0
+djangorestframework-simplejwt==4.4.0
 idna==2.9
 Markdown==3.2.1
 phonenumbers==8.12.1

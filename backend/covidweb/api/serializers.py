@@ -9,7 +9,7 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
 class BookingSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Booking
-        fields = ('id', 'location', 'start', 'end', 'date', 'name', 'phone_number', 'email')
+        fields = ('id', 'owner','location', 'start', 'end', 'date', 'name', 'phone_number', 'email')
         
 User = get_user_model()
 
@@ -27,28 +27,26 @@ class UserCreateSerializer(serializers.ModelSerializer):
             "email",
             "password",
             "password2",
-            "firstname",
-            "lastname",
-            "phone number"
+            "first_name",
+            "last_name",
         ]
         extra_kwargs = {"password": {"write_only": True}}
 
     def create(self, validated_data):
         username = validated_data["username"]
         email = validated_data["email"]
-        firstname = validated_data["firstname"]
-        lastname = validated_data["lastname"]
         password = validated_data["password"]
         password2 = validated_data["password2"]
+        first_name = validated_data["first_name"]
+        last_name = validated_data["last_name"]
+
         if (email and User.objects.filter(email=email).exclude(username=username).exists()):
             raise serializers.ValidationError(
                 {"email": "Email addresses must be unique."})
         if password != password2:
             raise serializers.ValidationError(
                 {"password": "The two passwords differ."})
-        user = User(username=username, email=email)
+        user = User(username=username, email=email,first_name=first_name,last_name=last_name)
         user.set_password(password)
-        user.first_name = firstname
-        user.last_name = lastname
         user.save()
         return user

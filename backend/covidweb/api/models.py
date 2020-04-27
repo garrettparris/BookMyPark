@@ -20,6 +20,8 @@ class Booking(models.Model):
     name = models.CharField(max_length=25)
     phone_number = models.CharField(max_length=15)
     email = models.EmailField(max_length=254)
+    attendees = models.IntegerField()
+    owner = models.ForeignKey(User,verbose_name = 'User', on_delete=models.CASCADE)
     def __str__(self):
         return self.name
 # class CustomUser(AbstractUser):
