@@ -24,7 +24,9 @@ class LoginForm extends Component {
       smShow: false,
       email: "",
       password: "",
-      mode: "login"
+      mode: "login",
+      loginError: false,
+      registerError: false,
     };
   }
 
@@ -34,10 +36,10 @@ class LoginForm extends Component {
     });
   };
 
-    renderForgot = () => {
-        // this.props.dispatch(loggedIn(true));
-        // this.props.loggedIn
-    return(
+  renderForgot = () => {
+    // this.props.dispatch(loggedIn(true));
+    // this.props.loggedIn
+    return (
       <div>
         <p>inside of forgot! :) </p>
         <a
@@ -53,19 +55,22 @@ class LoginForm extends Component {
     );
   };
 
+  handleEmailChange = (e) => {
+    this.setState({ email: e.target.value });
+  }
 
-
-
+  handlePasswordChange = (e) => {
+    this.setState({ password: e.target.value });
+  }
 
   renderRegister = () => {
     return (
       <div>
         <div>
           <form className="form-horizontal form-loanable">
-            <div className="alert alert-danger alert-sm">
-              <button type="button" className="close" data-dismiss="alert" aria-hidden="true">×</button>
+            {this.state.loginError && (<div className="alert alert-danger alert-sm">
               <span className="fw-semi-bold">Error:</span> Login failed.
-            </div>
+            </div>)}
             <fieldset>
               <div className="form-group has-feedback required">
                 <label htmlFor="login-email" className="col-sm-5">Username or email</label>
@@ -76,11 +81,9 @@ class LoginForm extends Component {
                     name="email"
                     id="login-email"
                     className="form-control"
-                    placeholder="Enter username or email"
-                    onChange={this.onChange}
+                    onChange={this.handleEmailChange}
                   />
                 </div>
-                { /* console.log('error email ::: ' + JSON.stringify(errors)) */}
               </div>
               <div className="form-group has-feedback required">
                 <label htmlFor="login-password" className="col-sm-5">Password</label>
@@ -92,11 +95,10 @@ class LoginForm extends Component {
                       name="password"
                       id="login-password"
                       className="form-control"
-                      placeholder="*****"
                       required
-                      onChange={this.onChange}
+                      onChange={this.handlePasswordChange}
                     />
-                    
+
                   </div>
                 </div>
               </div>
@@ -104,8 +106,11 @@ class LoginForm extends Component {
             <div className="form-action">
               <button
                 type="submit"
-                className="btn btn-lg btn-primary btn-left">Enter <span className="icon-arrow-right2 outlined"></span></button>
-              
+                className="btn btn-lg btn-primary btn-left"
+                className="btn btn-lg btn-primary btn-left" onClick={() => {
+                  console.log(this.state.email, this.state.password);
+                }}>Enter</button>
+
             </div>
           </form>
         </div>
@@ -125,71 +130,68 @@ class LoginForm extends Component {
   renderLogin = () => {
     return (
       <div>
-          <form className="form-horizontal form-loanable">
-            <div className="alert alert-danger alert-sm">
-              <button type="button" className="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <span className="fw-semi-bold">Error:</span> Login failed.
+        <form className="form-horizontal form-loanable">
+          {this.state.loginError && (<div className="alert alert-danger alert-sm">
+            <span className="fw-semi-bold">Error:</span> Login failed.
+          </div>)}
+          <fieldset>
+            <div className="form-group has-feedback required">
+              <label htmlFor="login-email" className="col-sm-5">Username or Email</label>
+              <div className="col-sm-7">
+                <span className="form-control-feedback" aria-hidden="true"></span>
+                <input
+                  type="text"
+                  name="email"
+                  id="login-email"
+                  className="form-control"
+                  onChange={this.handleEmailChange}
+                  required
+                />
               </div>
-            <fieldset>
-              <div className="form-group has-feedback required">
-                <label htmlFor="login-email" className="col-sm-5">Username or email</label>
-                <div className="col-sm-7">
-                  <span className="form-control-feedback" aria-hidden="true"></span>
-                  <input
-                    type="text"
-                    name="email"
-                    id="login-email"
-                    className="form-control"
-                    placeholder="Enter username or email"
-                    onChange={this.onChange}
-                    value={this.state.email}
-                    required
-                  />
-                </div>
-                { /* console.log('error email ::: ' + JSON.stringify(errors)) */}
-              </div>
-              <div className="form-group has-feedback required">
-                <label htmlFor="login-password" className="col-sm-5">Password</label>
-                <div className="col-sm-7">
-                  <span className="form-control-feedback" aria-hidden="true"></span>
-                  <div className="login-password-wrapper">
-                    <input
-                      type="password"
-                      name="password"
-                      id="login-password"
-                      className="form-control"
-                      placeholder="*****"
-                      required
-                      onChange={this.onChange}
-                      value={this.state.password}
-                    />
-                    <a
-                      href="#"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setMode("forgot");
-                      }}
-                    >
-                      Forgot Password
-                     </a>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div className="form-action">
-              <button
-                type="submit"
-                className="btn btn-lg btn-primary btn-left">Enter <span className="icon-arrow-right2 outlined"></span></button>
             </div>
-          </form>
-       <a
+            <div className="form-group has-feedback required">
+              <label htmlFor="login-password" className="col-sm-5">Password</label>
+              <div className="col-sm-7">
+                <span className="form-control-feedback" aria-hidden="true"></span>
+                <div className="login-password-wrapper">
+                  <input
+                    type="password"
+                    name="password"
+                    id="login-password"
+                    className="form-control"
+                    required
+                    onChange={this.handlePasswordChange}
+                  />
+                  <a
+                    href="#"
+                    onClick={e => {
+                      e.preventDefault();
+                      this.setMode("forgot");
+                    }}
+                  >
+                    Forgot Password
+                     </a>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div className="form-action">
+            <button
+              type="submit"
+              className="btn btn-lg btn-primary btn-left" onClick={() => {
+                console.log(this.state.email, this.state.password);
+              }}>Enter
+              </button>
+          </div>
+        </form>
+        <a
           href="#"
           onClick={e => {
             e.preventDefault();
             this.setMode("register");
           }}
         >
-        Create your account
+          Create your account
         </a>
       </div>
     );
@@ -203,17 +205,14 @@ class LoginForm extends Component {
           onHide={this.props.onClose}
           onSubmit={this.onSubmit}
           bsSize="large"
-          style={{paddingTop:'64px'}}
+          style={{ paddingTop: '64px' }}
         >
           <Modal.Header closeButton={true}>
-            <h2>{ this.state.mode === "login" ? "Login" : this.state.mode === "register" ? "Register" : "Forgot Password" }</h2>
+            <h2>{this.state.mode === "login" ? "Login" : this.state.mode === "register" ? "Register" : "Forgot Password"}</h2>
           </Modal.Header>
           <Modal.Body>
             {this.state.mode === "login" ? (this.renderLogin()) : this.state.mode === "register" ? (this.renderRegister()) : (this.renderForgot())}
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.props.onClose}>Close</Button>
-          </Modal.Footer>
         </Modal>
       </div>
     );
@@ -221,12 +220,12 @@ class LoginForm extends Component {
 }
 
 
-// Login.propTypes = {
-//     dispatch: PropTypes.func.isRequired,
-// };
+LoginForm.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => ({
-    loggedIn: state.loggedIn
+  loggedIn: state.loggedIn
 });
 
 export default connect(mapStateToProps)(LoginForm);

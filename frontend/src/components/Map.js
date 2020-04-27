@@ -11,7 +11,7 @@ import { Button } from "@material-ui/core";
 import MenuItem from '@material-ui/core/MenuItem';
 import DatePicker from "react-datepicker";
 import Grid from '@material-ui/core/Grid';
-import { connect,mapDispatchToProps } from 'react-redux';
+import { connect, mapDispatchToProps } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../actions/index';
 import "react-datepicker/dist/react-datepicker.css";
@@ -24,21 +24,21 @@ const options = [
     { value: 'Soccer', label: 'Soccer' },
     { value: 'Tennis', label: 'Tennis' },
     { value: 'Playground', label: 'Playground' },
-    { value: 'Garden', label: 'Garden'},
+    { value: 'Garden', label: 'Garden' },
 
 
 ];
 const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: 1,
+        flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
     },
-  }));
-  
+}));
+
 class CustomMap extends React.Component {
     state = {
         markers: [],
@@ -56,7 +56,7 @@ class CustomMap extends React.Component {
         errorMessage: "Phone Number is invalid",
         error: false,
         response: '',
-        showModal : false,
+        showModal: false,
 
     }
 
@@ -86,7 +86,7 @@ class CustomMap extends React.Component {
             console.log('call api')
             axios.get(url)
                 .then(res => {
-                    const data  = res.data.filter(function (marker) {
+                    const data = res.data.filter(function (marker) {
                         return marker.area != 'Muskoka' && marker.area != 'Orangeville'
                     })
                     this.setState({
@@ -142,19 +142,19 @@ class CustomMap extends React.Component {
     handleTimeChange = e => {
         const time = e.target.value;
         this.setState({ startTime: time });
-        this.setState({ endTime: time+1 });
+        this.setState({ endTime: time + 1 });
     }
     close = () => {
-        this.setState ({ showModal: false });
-      }
-    
-    
-    
-      open = () => {
-        this.setState ({ showModal : true});
-      }
-    
-    
+        this.setState({ showModal: false });
+    }
+
+
+
+    open = () => {
+        this.setState({ showModal: true });
+    }
+
+
     sendSMS = () => {
         var url = "http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/bookings/"
         try {
@@ -200,16 +200,16 @@ class CustomMap extends React.Component {
                 </div>
 
                 <Grid
-                container
-                direction = "column"
-                justify="center"
-                alignItems="center"
+                    container
+                    direction="column"
+                    justify="center"
+                    alignItems="center"
                 >
 
-{/* <div style={{ width: '50%', position: "relative", zIndex: '1000', marginTop: '30px', marginLeft: "20px", display: 'grid', gridTemplateColumns: '200px auto' }}>
+                    {/* <div style={{ width: '50%', position: "relative", zIndex: '1000', marginTop: '30px', marginLeft: "20px", display: 'grid', gridTemplateColumns: '200px auto' }}>
                     */}
-                    <div style={{ marginTop: '20px', marginLeft: '10px' }}>Select the amenities: </div> 
-                    <div style={{width:'50vw', zIndex:'999'}}>
+                    <div style={{ marginTop: '20px', marginLeft: '10px' }}>Select the amenities: </div>
+                    <div style={{ width: '50vw', zIndex: '999' }}>
                         <Select
                             isMulti
                             defaultValue={[]}
@@ -220,24 +220,24 @@ class CustomMap extends React.Component {
                             classNamePrefix="select"
                         />
                     </div>
-                        
-                    
-                {/* </div> */}
-                <Map center={[43.2557, -79.8711]} zoom={12}>
-                    {this.state.activePark && (
-                        
-                        <Popup
-                            position={[
-                                this.state.activePark.latitude,
-                                this.state.activePark.longitude
-                            ]}
-                            onClose={() => {
-                                this.setActivePark(null);
-                            }}
-                        >
-                            <div>
-                                <h2>{this.state.activePark.name}</h2>
-                                <p>{this.state.activePark.type} amenity available 10am-4pm</p>
+
+
+                    {/* </div> */}
+                    <Map center={[43.2557, -79.8711]} zoom={12}>
+                        {this.state.activePark && (
+
+                            <Popup
+                                position={[
+                                    this.state.activePark.latitude,
+                                    this.state.activePark.longitude
+                                ]}
+                                onClose={() => {
+                                    this.setActivePark(null);
+                                }}
+                            >
+                                <div>
+                                    <h2>{this.state.activePark.name}</h2>
+                                    <p>{this.state.activePark.type} amenity available 10am-4pm</p>
                                     {
                                         this.props.loggedIn ? (
                                             <Button variant="contained" color="primary" onClick={() => {
@@ -245,34 +245,34 @@ class CustomMap extends React.Component {
                                                 this.setState({ open1: true })
                                             }}>Book This Place</Button>
                                         ) : (
-                                            <Button variant="contained" color="primary" onClick={this.open}>Login</Button>
-                                        )
-                                            
-                                    }    
-                                
+                                                <Button variant="contained" color="primary" onClick={this.open}>Login</Button>
+                                            )
 
-                            </div>
-                        </Popup>
-                    )}
-                    <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    />
-                    <div>
-                    </div>
-                        {this.state.filteredmarkers.map((park, index) => (
-                        
-                        <Marker
-                            key={index}
-                            position={[park.latitude, park.longitude,]}
-                            onClick={() => { this.setActivePark(park); }}
+                                    }
+
+
+                                </div>
+                            </Popup>
+                        )}
+                        <TileLayer
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         />
-                    ))}
-                </Map>
+                        <div>
+                        </div>
+                        {this.state.filteredmarkers.map((park, index) => (
 
-                    
+                            <Marker
+                                key={index}
+                                position={[park.latitude, park.longitude,]}
+                                onClick={() => { this.setActivePark(park); }}
+                            />
+                        ))}
+                    </Map>
+
+
                 </Grid>
-                
+
 
                 {open1 && <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" open={open1}>
                     <DialogTitle id="simple-dialog-title" style={{ textAlign: 'center', paddingBottom: '0', marginTop: '10px' }}>{this.state.activePark.name}</DialogTitle>
@@ -294,7 +294,7 @@ class CustomMap extends React.Component {
                         >
                             {timeRange.map((option) => (
                                 <MenuItem key={option} value={option}>
-                                    {option}:00 - {option+1}:00
+                                    {option}:00 - {option + 1}:00
                                 </MenuItem>
                             ))}
                         </TextField><br />

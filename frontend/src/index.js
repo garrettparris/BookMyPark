@@ -17,6 +17,8 @@ const store = createStore(
 store.subscribe(() => {
   saveState({
     loggedIn: store.getState().loggedIn,
+    accessToken: store.getState().accessToken,
+    refreshToken: store.getState().refreshToken,
   });
 });
 
