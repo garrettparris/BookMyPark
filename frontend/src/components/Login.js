@@ -1,20 +1,20 @@
 import React, { Component } from "react";
+import axios from 'axios';
 import {
   Navbar,
   NavDropdown,
   MenuItem,
   NavItem,
   Nav,
+  Button,
   Popover,
   Tooltip,
-  Button,
   Modal,
   OverlayTrigger
 } from "react-bootstrap";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { login } from '../actions';
-import CreateNewAccount from "./CreateNewAccount";
+import { setAccessToken, setRefreshToken, login } from '../actions'
 
 class LoginForm extends Component {
   constructor() {
@@ -37,8 +37,6 @@ class LoginForm extends Component {
   };
 
   renderForgot = () => {
-    // this.props.dispatch(loggedIn(true));
-    // this.props.loggedIn
     return (
       <div>
         <p>inside of forgot! :) </p>
@@ -69,11 +67,11 @@ class LoginForm extends Component {
         <div>
           <form className="form-horizontal form-loanable">
             {this.state.loginError && (<div className="alert alert-danger alert-sm">
-              <span className="fw-semi-bold">Error:</span> Login failed.
+              <span className="fw-semi-bold">Error:</span> Register failed.
             </div>)}
             <fieldset>
               <div className="form-group has-feedback required">
-                <label htmlFor="login-email" className="col-sm-5">Username or email</label>
+                <label htmlFor="login-email" className="col-sm-5">Username</label>
                 <div className="col-sm-7">
                   <span className="form-control-feedback" aria-hidden="true"></span>
                   <input
@@ -104,12 +102,7 @@ class LoginForm extends Component {
               </div>
             </fieldset>
             <div className="form-action">
-              <button
-                type="submit"
-                className="btn btn-lg btn-primary btn-left"
-                className="btn btn-lg btn-primary btn-left" onClick={() => {
-                  console.log(this.state.email, this.state.password);
-                }}>Enter</button>
+              <Button className="btn btn-lg btn-primary btn-left" onClick={this.register}>Enter</Button>
 
             </div>
           </form>
@@ -130,13 +123,13 @@ class LoginForm extends Component {
   renderLogin = () => {
     return (
       <div>
-        <form className="form-horizontal form-loanable">
+        <form className="form-horizontal ">
           {this.state.loginError && (<div className="alert alert-danger alert-sm">
             <span className="fw-semi-bold">Error:</span> Login failed.
           </div>)}
           <fieldset>
             <div className="form-group has-feedback required">
-              <label htmlFor="login-email" className="col-sm-5">Username or Email</label>
+              <label htmlFor="login-email" className="col-sm-5">Username</label>
               <div className="col-sm-7">
                 <span className="form-control-feedback" aria-hidden="true"></span>
                 <input
@@ -175,14 +168,8 @@ class LoginForm extends Component {
               </div>
             </div>
           </fieldset>
-          <div className="form-action">
-            <button
-              type="submit"
-              className="btn btn-lg btn-primary btn-left" onClick={() => {
-                console.log(this.state.email, this.state.password);
-              }}>Enter
-              </button>
-          </div>
+
+          <Button className="btn btn-lg btn-primary btn-left" onClick={this.login}>Enter </Button>
         </form>
         <a
           href="#"
@@ -196,6 +183,54 @@ class LoginForm extends Component {
       </div>
     );
   };
+
+  login = () => {
+    axios({
+      method: 'post',
+      url: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/api/token/',
+      data: {
+        username: this.state.email,
+        password: this.state.password,
+      }
+
+    }).then(res => {
+      console.log(res.data);
+      this.setState({ loginError: false });
+      this.props.dispatch(setAccessToken(res.data.access));
+      this.props.dispatch(setRefreshToken(res.data.refresh));
+      this.props.dispatch(login(true));
+      this.props.onClose();
+    }, (error) => {
+      console.log(error);
+      this.setState({ loginError: true });
+    });
+  }
+
+  register = () => {
+    axios({
+      method: 'post',
+      url: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/register/',
+      data: {  
+        username: this.state.email,
+        password: this.state.password,
+        password2: this.state.password,
+        email: "garrettp18+22233341@gmail.com",
+        first_name: "first name",
+        last_name: "last name",
+      }
+
+    }).then(res => {
+      console.log(res.data);
+      this.setState({ loginError: false });
+      this.props.dispatch(setAccessToken(res.data.access));
+      this.props.dispatch(setRefreshToken(res.data.refresh));
+      this.props.dispatch(login(true));
+      this.props.onClose();
+    }, (error) => {
+      console.log(error);
+      this.setState({ loginError: true });
+    });
+  }
 
   render() {
     return (
