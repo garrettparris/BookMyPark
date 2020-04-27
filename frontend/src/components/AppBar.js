@@ -29,6 +29,7 @@ import LanguageIcon from '@material-ui/icons/Language';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ExploreIcon from '@material-ui/icons/Explore';
 import Sidebar from "./Sidebar";
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 
 const drawerWidth = 240;
 
@@ -121,6 +122,8 @@ function onClick(e, item) {
 }
 const items = [
   { name: "home", label: "Home", Icon: HomeIcon },
+  { name: "mybookings", label: "My Bookings", Icon: CalendarTodayIcon},
+
   {
     name: "account",
     label: "Account",

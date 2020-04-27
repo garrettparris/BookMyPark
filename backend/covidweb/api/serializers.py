@@ -9,7 +9,7 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
 class BookingSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Booking
-        fields = ('id', 'owner','location', 'start', 'end', 'date', 'name', 'phone_number', 'email')
+        fields = ('id', 'owner','attendees','location', 'start', 'end', 'date', 'name', 'phone_number', 'email')
         
 User = get_user_model()
 
