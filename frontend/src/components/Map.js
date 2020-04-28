@@ -49,7 +49,7 @@ class CustomMap extends React.Component {
         open1: false,
         userName: '',
         userPhoneNumber: '',
-        userEmail: '',
+        attendees: '',
         startTime: '',
         endTime: '',
         date: new Date(),
@@ -133,8 +133,8 @@ class CustomMap extends React.Component {
     handleDateChange = e => {
         this.setState({ date: e });
     }
-    handleEmailChange = e => {
-        this.setState({ userEmail: e.target.value });
+    handleNumberChange = e => {
+        this.setState({ attendees: e.target.value });
     }
     handlePhoneNumberChange = e => {
         this.setState({ userPhoneNumber: e.target.value });
@@ -278,9 +278,9 @@ class CustomMap extends React.Component {
                     <DialogTitle id="simple-dialog-title" style={{ textAlign: 'center', paddingBottom: '0', marginTop: '10px' }}>{this.state.activePark.name}</DialogTitle>
                     <DialogContent style={{ width: '400px', textAlign: 'center' }}>
                         <hr />
-                        <TextField id="standard-basic" label="Name" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNameChange} /><br />
+                        {/* <TextField id="standard-basic" label="Name" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNameChange} /><br /> */}
                         <TextField id="standard-basic" label="Phone Number" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handlePhoneNumberChange} /><br />
-                        <TextField id="standard-basic" label="Email" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleEmailChange} /><br />
+                        <TextField id="standard-basic" label="Number of People" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNumberChange} /><br />
                         <div>
                             <DatePicker
                                 style={{ width: '100%', marginBottom: '10px' }}
