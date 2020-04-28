@@ -8,13 +8,34 @@ from twilio.rest import Client
 from datetime import datetime
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
-
+import base64
+import json
 from django.contrib.auth import get_user_model
 from rest_framework import permissions
 from rest_framework import response, decorators, permissions, status
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserCreateSerializer
+from rest_framework.response import Response
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
 
+
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super().validate(attrs)
+        refresh = self.get_token(self.user)
+        data['refresh'] = str(refresh)
+        data['access'] = str(refresh.access_token)
+        data['username'] = self.user.username
+        data['first_name'] = self.user.first_name
+        data['last_name'] = self.user.last_name
+        data['email'] = self.user.email
+        # Add extra responses here
+        data['id'] = self.user.id
+        return data
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
 User = get_user_model()
 
 @decorators.api_view(["POST"])
@@ -28,7 +49,10 @@ def registration(request):
     res = {
         "refresh": str(refresh),
         "access": str(refresh.access_token),
-        'id': user.id
+        'id': user.id,
+        "username": user.username,
+        "first_name": user.first_name,
+        "email": user.email,
     }
     return response.Response(res, status.HTTP_201_CREATED)
 
@@ -39,6 +63,7 @@ def send_message(request):
     end = request.data.get('end')
     date = request.data.get('date')
     phone_number = request.data.get('phone_number')
+    attendees = request.data.get('attendees')
     data = requests.get(location)
     jsondata = data.json()
     location_name = jsondata['name']
@@ -48,7 +73,7 @@ def send_message(request):
     client = Client(account_sid, auth_token)
     message = client.messages.create( 
                               from_='+18509403611',
-                              body=location_name + ' ' + location_type + ' booked from ' + start + ' to ' + end +' on ' + date[:10] + ' by ' + name,
+                              body=location_name + ' ' + location_type + ' booked from ' + start + ' to ' + end +' on ' + date[:10] + ' by ' + name + ' for ' + attendees + ' people.',
                               to=phone_number 
                           ) 
  
@@ -76,7 +101,13 @@ class BookingViewSet(viewsets.ModelViewSet):
 
 @decorators.api_view(["GET"])
 def current_user(request):
-    user = request.user
-    return Response({
-        "id": user.id
+        request = request
+        token = http_auth = request.META.get('HTTP_AUTHORIZATION', None)
+        token = token.replace("Token ", "")
+        user_json = json.loads(base64.b64decode(token.split(".")[1]))
+        user_id = user_json['id']
+        User = get_user_model()
+        user_obj = User.objects.get(id=user_id)
+        return Response({
+        "id": user_obj.id,
     })

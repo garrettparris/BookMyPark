@@ -58,6 +58,7 @@ class CustomMap extends React.Component {
         response: '',
         showModal: false,
 
+
     }
 
     handleChange = selectedOption => {
@@ -154,25 +155,27 @@ class CustomMap extends React.Component {
         this.setState({ showModal: true });
     }
 
-
     sendSMS = () => {
         var url = "http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/bookings/"
         try {
-
+            console.log(this.props.uid)
             axios({
                 method: 'post',
                 url: url,
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + this.props.access
                 },
                 data: {
+                    owner: this.props.uid,
+                    attendees: this.state.attendees,
                     location: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/' + this.state.activePark.id + '/',
                     start: this.state.startTime + ':00',
                     end: this.state.endTime + ':00',
                     date: this.state.date,
-                    name: this.state.userName,
+                    name: this.props.userName,
                     phone_number: this.state.userPhoneNumber,
-                    email: this.state.userEmail,
+                    email: this.props.userEmail,
                 }
             }).then((res) => {
                 console.log(res);
@@ -322,7 +325,13 @@ CustomMap.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-    loggedIn: state.loggedIn
+    loggedIn: state.loggedIn,
+    access: state.accessToken,
+    refresh: state.refeshToken,
+    uid: state.uid,
+    userName: state.userName,
+    userEmail: state.userEmail
+
 });
 
 

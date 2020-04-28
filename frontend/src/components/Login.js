@@ -14,7 +14,7 @@ import {
 } from "react-bootstrap";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { setAccessToken, setRefreshToken, login } from '../actions'
+import { setAccessToken, setRefreshToken, login , setUserId, setUserName, setEmail, setFirstName} from '../actions'
 
 class LoginForm extends Component {
   constructor() {
@@ -241,7 +241,7 @@ class LoginForm extends Component {
   login = () => {
     axios({
       method: 'post',
-      url: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/api/token/',
+      url: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/token/',
       data: {
         username: this.state.email,
         password: this.state.password,
@@ -252,8 +252,14 @@ class LoginForm extends Component {
       this.setState({ loginError: false });
       this.props.dispatch(setAccessToken(res.data.access));
       this.props.dispatch(setRefreshToken(res.data.refresh));
+      this.props.dispatch(setUserId(res.data.id));
+      this.props.dispatch(setUserName(res.data.username));
+      this.props.dispatch(setEmail(res.data.email));
+      this.props.dispatch(setFirstName(res.data.first_name));
       this.props.dispatch(login(true));
       this.props.onClose();
+      window.location.reload();
+
     }, (error) => {
       console.log(error);
       this.setState({ loginError: true });
@@ -278,7 +284,11 @@ class LoginForm extends Component {
       this.setState({ loginError: false });
       this.props.dispatch(setAccessToken(res.data.access));
       this.props.dispatch(setRefreshToken(res.data.refresh));
+      this.props.dispatch(setUserId(res.data.id));
       this.props.dispatch(login(true));
+      this.props.dispatch(setUserName(res.data.username));
+      this.props.dispatch(setEmail(res.data.email));
+      this.props.dispatch(setFirstName(res.data.first_name));
       this.props.onClose();
     }, (error) => {
       console.log(error);
@@ -314,7 +324,11 @@ LoginForm.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  loggedIn: state.loggedIn
+  loggedIn: state.loggedIn,
+  uid: state.userid,
+  username: state.userName,
+  userEmail: state.userEmail,
+  firstName: state.firstName
 });
 
 export default connect(mapStateToProps)(LoginForm);

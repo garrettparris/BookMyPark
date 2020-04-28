@@ -30,7 +30,16 @@ import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ExploreIcon from '@material-ui/icons/Explore';
 import Sidebar from "./Sidebar";
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+  Redirect,
+  useHistory
+} from "react-router-dom";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -120,9 +129,15 @@ const useStyles = makeStyles((theme) => ({
 function onClick(e, item) {
   window.alert(JSON.stringify(item, null, 2));
 }
+
+function onClickRouter(e, item) {
+  
+  history.push("/" + item)
+}
+
 const items = [
   { name: "home", label: "Home", Icon: HomeIcon },
-  { name: "mybookings", label: "My Bookings", Icon: CalendarTodayIcon},
+  { name: "mybookings", label: "My Bookings", Icon: CalendarTodayIcon, onClickRouter},
 
   {
     name: "account",
@@ -168,8 +183,10 @@ function ResponsiveDrawer(props) {
       <Sidebar items={items} />
     </div>
   );
+  const history = useHistory();
 
   return (
+    
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>

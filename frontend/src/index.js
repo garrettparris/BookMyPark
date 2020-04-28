@@ -19,6 +19,10 @@ store.subscribe(() => {
     loggedIn: store.getState().loggedIn,
     accessToken: store.getState().accessToken,
     refreshToken: store.getState().refreshToken,
+    uid: store.getState().uid,
+    userName: store.getState().userName,
+    userEmail: store.getState().userEmail,
+    firstName: store.getState().firstName,
   });
 });
 
