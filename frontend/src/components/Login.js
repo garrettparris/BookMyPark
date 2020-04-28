@@ -24,6 +24,9 @@ class LoginForm extends Component {
       smShow: false,
       email: "",
       password: "",
+      username: '',
+      firstname: '',
+      lastname: '',
       mode: "login",
       loginError: false,
       registerError: false,
@@ -61,6 +64,18 @@ class LoginForm extends Component {
     this.setState({ password: e.target.value });
   }
 
+  handleFirstNameChange = (e) => {
+    this.setState({ firstname: e.target.value });
+  }
+
+  handleLastNameChange = (e) => {
+    this.setState({ lastname: e.target.value });
+  }
+
+  handleUsernameChange = (e) => {
+    this.setState({ username: e.target.value });
+  }
+
   renderRegister = () => {
     return (
       <div>
@@ -70,8 +85,9 @@ class LoginForm extends Component {
               <span className="fw-semi-bold">Error:</span> Register failed.
             </div>)}
             <fieldset>
+
               <div className="form-group has-feedback required">
-                <label htmlFor="login-email" className="col-sm-5">Username</label>
+                <label htmlFor="login-email" className="col-sm-5">Email</label>
                 <div className="col-sm-7">
                   <span className="form-control-feedback" aria-hidden="true"></span>
                   <input
@@ -84,19 +100,57 @@ class LoginForm extends Component {
                 </div>
               </div>
               <div className="form-group has-feedback required">
-                <label htmlFor="login-password" className="col-sm-5">Password</label>
+                <label htmlFor="login-email" className="col-sm-5">First Name</label>
                 <div className="col-sm-7">
                   <span className="form-control-feedback" aria-hidden="true"></span>
-                  <div className="login-password-wrapper">
-                    <input
-                      type="password"
-                      name="password"
-                      id="login-password"
-                      className="form-control"
-                      required
-                      onChange={this.handlePasswordChange}
-                    />
-
+                  <input
+                    type="text"
+                    name="email"
+                    id="login-email"
+                    className="form-control"
+                    onChange={this.handleFirstNameChange}
+                  />
+                </div>
+              </div>
+              <div className="form-group has-feedback required">
+                <label htmlFor="login-email" className="col-sm-5">Last Name</label>
+                <div className="col-sm-7">
+                  <span className="form-control-feedback" aria-hidden="true"></span>
+                  <input
+                    type="text"
+                    name="email"
+                    id="login-email"
+                    className="form-control"
+                    onChange={this.handleLastNameChange}
+                  />
+                </div>
+              </div>
+              <div className="form-group has-feedback required">
+                <label htmlFor="login-email" className="col-sm-5">Username</label>
+                <div className="col-sm-7">
+                  <span className="form-control-feedback" aria-hidden="true"></span>
+                  <input
+                    type="text"
+                    name="email"
+                    id="login-email"
+                    className="form-control"
+                    onChange={this.handleUsernameChange}
+                  />
+                </div>
+                <div className="form-group has-feedback required">
+                  <label htmlFor="login-password" className="col-sm-5">Password</label>
+                  <div className="col-sm-7">
+                    <span className="form-control-feedback" aria-hidden="true"></span>
+                    <div className="login-password-wrapper">
+                      <input
+                        type="password"
+                        name="password"
+                        id="login-password"
+                        className="form-control"
+                        required
+                        onChange={this.handlePasswordChange}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -210,13 +264,13 @@ class LoginForm extends Component {
     axios({
       method: 'post',
       url: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/register/',
-      data: {  
-        username: this.state.email,
+      data: {
+        username: this.state.username,
         password: this.state.password,
         password2: this.state.password,
-        email: "garrettp18+22233341@gmail.com",
-        first_name: "first name",
-        last_name: "last name",
+        email: this.state.email,
+        first_name: this.state.firstname,
+        last_name: this.state.lastname,
       }
 
     }).then(res => {

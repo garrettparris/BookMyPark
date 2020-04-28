@@ -8,6 +8,7 @@ import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ExploreIcon from '@material-ui/icons/Explore';
 import { useMediaQuery } from 'react-responsive'
 
+
 function onClick(e, item) {
   window.alert(JSON.stringify(item, null, 2));
 }
@@ -51,6 +52,7 @@ class App extends React.Component {
         
         <div className='app-nav'>
           <NavBar />
+          
         </div>
 
       </div>

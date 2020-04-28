@@ -12,6 +12,9 @@ import { Button } from "@material-ui/core";
 import { setAccessToken, setRefreshToken, login } from '../actions'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Logout from './logout';
+
+
 function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
   const [collapsed, setCollapsed] = React.useState(true);
   const { label, items, Icon, onClick: onClickProp } = item;
@@ -87,7 +90,7 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
   );
 }
 
-function Sidebar({ items, depthStep, depth, expanded, loggedIn }) {
+function Sidebar({ items, depthStep, depth, expanded }) {
   return (
     <div className="sidebar" style = {{paddingTop:'64px'}}>
       <div className='imgcontainer'>
@@ -112,12 +115,7 @@ function Sidebar({ items, depthStep, depth, expanded, loggedIn }) {
         ))}
       
       </List>
-      {loggedIn ? (<div></div>) : (
-        <Button style={{position:'absolute', bottom:'0', width:'99%', backgroundColor:'red', borderRadius:'0',}}>
-        Logout
-        </Button>
-      )}
-      
+      <Logout/>
     </div>
   );
 }
