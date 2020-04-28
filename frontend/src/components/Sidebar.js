@@ -8,8 +8,10 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import Collapse from "@material-ui/core/Collapse";
 import "../styles/app.css";
 import logo from "../assests/images/hammercity.jpg"
-
-
+import { Button } from "@material-ui/core";
+import { setAccessToken, setRefreshToken, login } from '../actions'
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
   const [collapsed, setCollapsed] = React.useState(true);
   const { label, items, Icon, onClick: onClickProp } = item;
@@ -79,12 +81,13 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
             ))}
           </List>
         ) : null}
+        
       </Collapse>
     </>
   );
 }
 
-function Sidebar({ items, depthStep, depth, expanded }) {
+function Sidebar({ items, depthStep, depth, expanded, loggedIn }) {
   return (
     <div className="sidebar" style = {{paddingTop:'64px'}}>
       <div className='imgcontainer'>
@@ -107,9 +110,24 @@ function Sidebar({ items, depthStep, depth, expanded }) {
               )}
           </React.Fragment>
         ))}
+      
       </List>
+      {loggedIn ? (<div></div>) : (
+        <Button style={{position:'absolute', bottom:'0', width:'99%', backgroundColor:'red', borderRadius:'0',}}>
+        Logout
+        </Button>
+      )}
+      
     </div>
   );
 }
 
-export default Sidebar;
+Sidebar.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  loggedIn: state.loggedIn
+});
+
+export default connect(mapStateToProps)(Sidebar);

@@ -7,6 +7,7 @@ from .models import Location, Booking
 from twilio.rest import Client 
 from datetime import datetime
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
 
 from django.contrib.auth import get_user_model
 from rest_framework import permissions
@@ -72,3 +73,10 @@ class BookingViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         my_result=send_message(request)
         return HttpResponseRedirect('/success/')
+
+@decorators.api_view(["GET"])
+def current_user(request):
+    user = request.user
+    return Response({
+        "id": user.id
+    })

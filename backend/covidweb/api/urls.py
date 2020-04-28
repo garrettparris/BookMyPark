@@ -6,7 +6,7 @@ from .views import registration
 router = routers.DefaultRouter()
 router.register(r'locations', views.LocationViewSet)
 router.register(r'bookings', views.BookingViewSet)
-
+router.register(r'current', views.CurrentUserView)
 
 urlpatterns = [
     path('', include(router.urls)),
