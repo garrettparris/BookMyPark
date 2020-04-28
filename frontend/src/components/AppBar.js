@@ -15,7 +15,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme,fade } from '@material-ui/core/styles';
+import { makeStyles, useTheme, fade } from '@material-ui/core/styles';
 import CustomMap from './Map'
 import Banner from './Banner'
 import { FaTree } from 'react-icons/fa';
@@ -40,153 +40,166 @@ import {
   Redirect,
   useHistory
 } from "react-router-dom";
-const drawerWidth = 240;
+import Bookings from './Bookings';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-  },
-  appBar: {
-    // [theme.breakpoints.up('sm')]: {
-    //   width: `calc(100% - ${drawerWidth}px)`,
-    //   marginLeft: drawerWidth,
-    //   zIndex: theme.zIndex.drawer + 1,
 
-    // },
-    backgroundColor:'#03a9f4',
-    zIndex: theme.zIndex.drawer + 1,
-
-  },
-  drawer: {
-    [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-      zIndex: theme.zIndex.appBar -1 ,
-    },
-  },
-
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
-  },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  mapBox: {
-    paddingTop: '64px',
-    width: '100%'
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-  search: {
-
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
-    },
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
-      width: 'auto',
-    },
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  inputRoot: {
-    color: 'inherit',
-
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      },
-    },
-  },
-}));
-function onClick(e, item) {
-  window.alert(JSON.stringify(item, null, 2));
-}
-
-function onClickRouter(e, item) {
-  
-  history.push("/" + item)
-}
-
-const items = [
-  { name: "home", label: "Home", Icon: HomeIcon },
-  { name: "mybookings", label: "My Bookings", Icon: CalendarTodayIcon, onClickRouter},
-
-  {
-    name: "account",
-    label: "Account",
-    Icon: LanguageIcon,
-    items: [
-      { name: "statements", label: "Govt. Id", onClick },
-      { name: "reports", label: "Profile", onClick },
-      { name: "reports", label: "COVID-19 Profile", onClick },
-      { name: "reports", label: "Preferences", onClick }
-    ]
-  },
-  {
-    name: "privacy",
-    label: "Privacy",
-    Icon: VerifiedUserIcon,
-    items: [
-      { name: "statements", label: "Govt. Id", onClick }
-    ]
-  },
-  {
-    name: "acount",
-    label: "Open Amenities Today",
-    Icon: ExploreIcon,
-    items: [
-      { name: "statements", label: "Govt. Id", onClick }
-    ]
-  }
-];
 
 function ResponsiveDrawer(props) {
+  const drawerWidth = 240;
   const { container } = props;
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+    },
+    appBar: {
+      // [theme.breakpoints.up('sm')]: {
+      //   width: `calc(100% - ${drawerWidth}px)`,
+      //   marginLeft: drawerWidth,
+      //   zIndex: theme.zIndex.drawer + 1,
+
+      // },
+      backgroundColor: '#03a9f4',
+      zIndex: theme.zIndex.drawer + 1,
+
+    },
+    drawer: {
+      [theme.breakpoints.up('sm')]: {
+        width: drawerWidth,
+        flexShrink: 0,
+        zIndex: theme.zIndex.appBar - 1,
+      },
+    },
+
+    menuButton: {
+      marginRight: theme.spacing(2),
+      [theme.breakpoints.up('sm')]: {
+        display: 'none',
+      },
+    },
+    // necessary for content to be below app bar
+    toolbar: theme.mixins.toolbar,
+    drawerPaper: {
+      width: drawerWidth,
+    },
+    mapBox: {
+      paddingTop: '64px',
+      width: '100%'
+    },
+    content: {
+      flexGrow: 1,
+      padding: theme.spacing(3),
+    },
+    search: {
+
+      position: 'relative',
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: fade(theme.palette.common.white, 0.15),
+      '&:hover': {
+        backgroundColor: fade(theme.palette.common.white, 0.25),
+      },
+      marginLeft: 0,
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(1),
+        width: 'auto',
+      },
+    },
+    searchIcon: {
+      padding: theme.spacing(0, 2),
+      height: '100%',
+      position: 'absolute',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    inputRoot: {
+      color: 'inherit',
+
+    },
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        width: '12ch',
+        '&:focus': {
+          width: '20ch',
+        },
+      },
+    },
+  }));
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [bookingOpen, setBookingOpen] = React.useState(false);
+
+
+
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  
+
+  const openBooking = () => {
+    setBookingOpen(true);
+  };
+
+  const closeBooking = () => {
+    setBookingOpen(false);
+  };
+
+  function onClick(e, item) {
+    if (item.name === "home") {
+      closeBooking();
+    } else if (item.name === "booking") {
+      openBooking();
+    }
+  }
+
+  const items = [
+    { name: "home", label: "Home", Icon: HomeIcon, onClick },
+    { name: "booking", label: "My Bookings", Icon: CalendarTodayIcon, onClick },
+
+    {
+      name: "account",
+      label: "Account",
+      Icon: LanguageIcon,
+      items: [
+        { name: "statements", label: "Govt. Id", onClick },
+        { name: "reports", label: "Profile", onClick },
+        { name: "reports", label: "COVID-19 Profile", onClick },
+        { name: "reports", label: "Preferences", onClick }
+      ]
+    },
+    {
+      name: "privacy",
+      label: "Privacy",
+      Icon: VerifiedUserIcon,
+      items: [
+        { name: "statements", label: "Govt. Id", onClick }
+      ]
+    },
+    {
+      name: "acount",
+      label: "Open Amenities Today",
+      Icon: ExploreIcon,
+      items: [
+        { name: "statements", label: "Govt. Id", onClick }
+      ]
+    }
+  ];
+
   const drawer = (
     <div>
       <Sidebar items={items} />
     </div>
   );
-  const history = useHistory();
 
   return (
-    
+
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
@@ -201,7 +214,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-          <FaTree style={{ marginBottom: '-4px', marginRight: '5px' }} />
+            <FaTree style={{ marginBottom: '-4px', marginRight: '5px' }} />
 
             BookMyPark
           </Typography>
@@ -257,13 +270,14 @@ function ResponsiveDrawer(props) {
       <div>
       </div>
       <div className={classes.mapBox}>
-      <div style={{backgroundColor:'rgba(1,1,1,0.05)', paddingBottom:'5px', paddingLeft:'20px' }}>City of Hamilton COVID-19 Updates for Apr 15th, 2020</div>
-       <div style={{paddingTop:'5px', padding:'10px', justifyContent:'center', textAlign:'center'}}><Banner /></div>
-      
+        <div style={{ backgroundColor: 'rgba(1,1,1,0.05)', paddingBottom: '5px', paddingLeft: '20px' }}>City of Hamilton COVID-19 Updates for Apr 15th, 2020</div>
+        <div style={{ paddingTop: '5px', padding: '10px', justifyContent: 'center', textAlign: 'center' }}><Banner /></div>
 
-        <CustomMap></CustomMap>
+
+        {!bookingOpen && (<CustomMap></CustomMap>)}
+        {bookingOpen && (<Bookings></Bookings>)}
       </div>
-      
+
     </div>
   );
 }
