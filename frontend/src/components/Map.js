@@ -11,12 +11,13 @@ import { Button } from "@material-ui/core";
 import MenuItem from '@material-ui/core/MenuItem';
 import DatePicker from "react-datepicker";
 import Grid from '@material-ui/core/Grid';
-import { connect, mapDispatchToProps } from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { login } from '../actions/index';
 import "react-datepicker/dist/react-datepicker.css";
-import { makeStyles } from '@material-ui/core/styles';
 import LoginForm from './Login.js';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+import MediaQuery from 'react-responsive'
 
 const options = [
     { value: 'Basketball', label: 'Basketball' },
@@ -28,16 +29,7 @@ const options = [
 
 
 ];
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-}));
+
 
 class CustomMap extends React.Component {
     state = {
@@ -46,19 +38,18 @@ class CustomMap extends React.Component {
         selectedOption: [],
         filteredmarkers: [],
         open1: false,
-        open1: false,
         userName: '',
         userPhoneNumber: '',
         attendees: '',
         startTime: '',
         endTime: '',
-        date: new Date(),
+        date: '',
         errorMessage: "Phone Number is invalid",
         error: false,
         response: '',
         showModal: false,
-
-
+        blockTime: true,
+        filteredOptions: []
     }
 
     handleChange = selectedOption => {
@@ -71,7 +62,7 @@ class CustomMap extends React.Component {
                 console.log(element);
                 let temp = this.state.markers.filter(function (marker) {
                     console.log(marker.area)
-                    return marker.type == element.value && marker.area != 'Muskoka' && marker.area != 'Orangeville'
+                    return marker.type === element.value && marker.area !== 'Muskoka' && marker.area !== 'Orangeville'
                 })
 
                 array = array.concat(temp);
@@ -83,12 +74,11 @@ class CustomMap extends React.Component {
     callAPI() {
 
         try {
-            var url = 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/'
-            console.log('call api')
+            var url = 'https://bookmypark.ca/api/locations/'
             axios.get(url)
                 .then(res => {
                     const data = res.data.filter(function (marker) {
-                        return marker.area != 'Muskoka' && marker.area != 'Orangeville'
+                        return marker.area !== 'Muskoka' && marker.area !== 'Orangeville'
                     })
                     this.setState({
                         markers: data,
@@ -132,13 +122,17 @@ class CustomMap extends React.Component {
         this.setState({ endTime: e.target.value });
     }
     handleDateChange = e => {
-        this.setState({ date: e });
+        this.setState({
+            date: e,
+            blockTime: false,
+        });
+
     }
     handleNumberChange = e => {
         this.setState({ attendees: e.target.value });
     }
     handlePhoneNumberChange = e => {
-        this.setState({ userPhoneNumber: e.target.value });
+        this.setState({ userPhoneNumber: e });
     }
     handleTimeChange = e => {
         const time = e.target.value;
@@ -149,31 +143,50 @@ class CustomMap extends React.Component {
         this.setState({ showModal: false });
     }
 
+    // filterTimeSlots(date) {
+    //     axios.get('http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/bookings?date=' + this.formatDate(this.state.date))
+    //         .then(
+    //         filtered = res.data
+    //     )
+    // }
 
+    formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
 
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+
+        return [year, month, day].join('-');
+    }
     open = () => {
         this.setState({ showModal: true });
     }
 
     sendSMS = () => {
-        var url = "http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/bookings/"
+        var url = "https://bookmypark.ca/api/bookings/"
         try {
-            console.log(this.props.uid)
+            console.log(this.state.attendees)
             axios({
                 method: 'post',
                 url: url,
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + this.props.access
+                    // 'Authorization': 'Bearer ' + this.props.access
                 },
                 data: {
-                    owner: this.props.uid,
+                    // owner_id: this.props.uid,
                     attendees: this.state.attendees,
-                    location: 'http://ec2-18-218-36-171.us-east-2.compute.amazonaws.com:8080/locations/' + this.state.activePark.id + '/',
+                    location: this.state.activePark.id.toString(),
                     start: this.state.startTime + ':00',
                     end: this.state.endTime + ':00',
-                    date: this.state.date,
+                    date: this.formatDate(this.state.date),
                     name: this.props.userName,
+                    username: this.props.userName,
                     phone_number: this.state.userPhoneNumber,
                     email: this.props.userEmail,
                 }
@@ -226,7 +239,7 @@ class CustomMap extends React.Component {
 
 
                     {/* </div> */}
-                    <Map center={[43.2557, -79.8711]} zoom={12}>
+                    <Map center={[43.2557, -79.8711]} zoom={12} style={{marginBottom:'50px'}}>
                         {this.state.activePark && (
 
                             <Popup
@@ -275,25 +288,54 @@ class CustomMap extends React.Component {
 
 
                 </Grid>
-
-
                 {open1 && <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" open={open1}>
                     <DialogTitle id="simple-dialog-title" style={{ textAlign: 'center', paddingBottom: '0', marginTop: '10px' }}>{this.state.activePark.name}</DialogTitle>
-                    <DialogContent style={{ width: '400px', textAlign: 'center' }}>
+                    <DialogContent style={{ width: '400px', height: '65vh', textAlign: 'center' }}>
                         <hr />
                         {/* <TextField id="standard-basic" label="Name" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNameChange} /><br /> */}
-                        <TextField id="standard-basic" label="Phone Number" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handlePhoneNumberChange} /><br />
+                        {/* <TextField id="standard-basic" label="Phone Number" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handlePhoneNumberChange} /><br /> */}
+                        <PhoneInput
+                            country={'ca'}
+                            value={this.state.userPhoneNumber}
+                            onChange={this.handlePhoneNumberChange}
+                        />
                         <TextField id="standard-basic" label="Number of People" style={{ width: '60%', marginBottom: '10px' }} onChange={this.handleNumberChange} /><br />
                         <div>
+
+                            <MediaQuery maxDeviceWidth={1224}>
+                            <DatePicker
+                                    style={{ width: '100%', marginBottom: '10px' }}
+                                    selected={this.state.date}
+                                    onChange={this.handleDateChange}
+                                    todayButton="Today"
+                                    isClearable
+                                    minDate={new Date()}
+                                    placeholderText="Select Date"
+                                    withPortal
+
+                                />
+                            </MediaQuery>
+                            <MediaQuery minDeviceWidth={1224}>
                             <DatePicker
                                 style={{ width: '100%', marginBottom: '10px' }}
                                 selected={this.state.date}
                                 onChange={this.handleDateChange}
+                                todayButton="Today"
+                                isClearable
+                                minDate={new Date()}
+                                placeholderText="Select Date"
+
                             />
+                            </MediaQuery>
+
                         </div>
-                        <TextField select style={{ width: '60%', marginBottom: '10px' }} label="Time Range"
+                        <TextField
+                            select
+                            style={{ width: '60%', marginBottom: '10px' }}
+                            label={this.state.blockTime ? ('Disabled') : ('Select Time Range')}
                             value={this.state.userTimeRange}
                             onChange={this.handleTimeChange}
+                            disabled={this.state.blockTime}
                         >
                             {timeRange.map((option) => (
                                 <MenuItem key={option} value={option}>
@@ -305,7 +347,7 @@ class CustomMap extends React.Component {
 
                         <br />
                         {error && (<div style={{ color: "red" }}>{errorMessage}<br /><br /></div>)}
-                        <Button variant="contained" color="primary" onClick={this.sendSMS}>Book This Place</Button>
+                        <Button variant="contained" color="primary" onClick={this.sendSMS} disabled={this.state.blockTime}>Book This Place</Button>
                         <br /><br />
                     </DialogContent>
                 </Dialog>}

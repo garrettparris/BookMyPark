@@ -7,7 +7,6 @@ import reducers from './reducers';
 import App from './components/App';
 import { loadState, saveState} from './reducers/localStorage';
 import * as serviceWorker from './serviceWorker';
-
 const persistedState = loadState();
 const store = createStore(
     reducers,

@@ -8,8 +8,6 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import Collapse from "@material-ui/core/Collapse";
 import "../styles/app.css";
 import logo from "../assests/images/hammercity.jpg"
-import { Button } from "@material-ui/core";
-import { setAccessToken, setRefreshToken, login } from '../actions'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Logout from './logout';
@@ -37,7 +35,7 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
     expandIcon = !collapsed ? (
       <ExpandLessIcon
         className={
-          "sidebar-item-expand-arrow" + " sidebar-item-expand-arrow-expanded"
+          "sidebar-item-expand-arrow" 
         }
       />
     ) : (
@@ -95,7 +93,7 @@ function Sidebar({ items, depthStep, depth, expanded }) {
     <div className="sidebar" style = {{paddingTop:'64px'}}>
       <div className='imgcontainer'>
         <a href="https://www.hamilton.ca/">
-          <img src={logo} className='logo'></img>
+          <img src={logo} className='logo' alt='logo'></img>
         </a>
       </div>
       <List disablePadding dense>
@@ -115,7 +113,7 @@ function Sidebar({ items, depthStep, depth, expanded }) {
         ))}
       
       </List>
-      <Logout/>
+      <Logout />
     </div>
   );
 }

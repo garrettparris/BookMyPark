@@ -2,16 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -19,10 +12,6 @@ import { makeStyles, useTheme, fade } from '@material-ui/core/styles';
 import CustomMap from './Map'
 import Banner from './Banner'
 import { FaTree } from 'react-icons/fa';
-import Avatar from '@material-ui/core/Avatar';
-import SearchIcon from '@material-ui/icons/Search';
-import InputBase from '@material-ui/core/InputBase';
-import logo from "../assests/images/hammercity.jpg"
 import "../styles/app.css";
 import HomeIcon from "@material-ui/icons/Home";
 import LanguageIcon from '@material-ui/icons/Language';
@@ -30,17 +19,13 @@ import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ExploreIcon from '@material-ui/icons/Explore';
 import Sidebar from "./Sidebar";
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-  Redirect,
-  useHistory
-} from "react-router-dom";
+import Avatar from '@material-ui/core/Avatar';
 import Bookings from './Bookings';
+import { connect} from 'react-redux';
+import { Button } from "@material-ui/core";
+import LoginForm from './Login.js';
+import { useMediaQuery } from 'react-responsive'
+import Footer from './Footer'
 
 
 
@@ -135,10 +120,12 @@ function ResponsiveDrawer(props) {
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [bookingOpen, setBookingOpen] = React.useState(false);
+  const [showModal, setShowModal] = React.useState(false)
 
 
-
-
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1224px)'
+  })
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -150,7 +137,12 @@ function ResponsiveDrawer(props) {
   const closeBooking = () => {
     setBookingOpen(false);
   };
-
+  const open = () => {
+    setShowModal(true)
+  }
+  const close = () => {
+    setShowModal(false)
+  }
   function onClick(e, item) {
     if (item.name === "home") {
       closeBooking();
@@ -158,6 +150,8 @@ function ResponsiveDrawer(props) {
       openBooking();
     }
   }
+  const todayDate = new Date()
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
   const items = [
     { name: "home", label: "Home", Icon: HomeIcon, onClick },
@@ -201,6 +195,9 @@ function ResponsiveDrawer(props) {
   return (
 
     <div className={classes.root}>
+      <div styles={{ paddingTop: '80px' }}>
+                    <LoginForm showModal={showModal} onClose={close} />
+                </div>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
@@ -213,7 +210,9 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
+
           <Typography variant="h6" noWrap>
+            
             <FaTree style={{ marginBottom: '-4px', marginRight: '5px' }} />
 
             BookMyPark
@@ -232,7 +231,14 @@ function ResponsiveDrawer(props) {
             />
 
           </div> */}
-          {/* <Avatar style={{backgroundColor:'orange', marginLeft:'20px', float:'right'}}>N</Avatar> */}
+          {isDesktopOrLaptop && <> {props.loggedIn ?
+            (<Avatar style={{ backgroundColor: 'orange', marginRight: '20px', right: '0', position: 'absolute' }}>{props.userName[0]}</Avatar>)
+            :
+            (<Button style={{ marginRight: '20px', right: '0', position: 'absolute' }} variant="contained" color="primary" onClick={open}>Login</Button>)}
+            </>
+            }
+          
+
 
         </Toolbar>
       </AppBar>
@@ -270,24 +276,30 @@ function ResponsiveDrawer(props) {
       <div>
       </div>
       <div className={classes.mapBox}>
-        <div style={{ backgroundColor: 'rgba(1,1,1,0.05)', paddingBottom: '5px', paddingLeft: '20px' }}>City of Hamilton COVID-19 Updates for Apr 15th, 2020</div>
+        <div style={{ backgroundColor: 'rgba(1,1,1,0.05)', paddingBottom: '5px', paddingLeft: '20px' }}>City of Hamilton COVID-19 Updates for {months[todayDate.getMonth()]} {todayDate.getDate()}, {todayDate.getFullYear()}</div>
         <div style={{ paddingTop: '5px', padding: '10px', justifyContent: 'center', textAlign: 'center' }}><Banner /></div>
 
 
         {!bookingOpen && (<CustomMap></CustomMap>)}
         {bookingOpen && (<Bookings></Bookings>)}
-      </div>
+        <Footer style={{zIndex:'999'}}/>
 
+      </div>
     </div>
   );
 }
 
 ResponsiveDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  container: PropTypes.any,
+  dispatch: PropTypes.func.isRequired,
 };
 
-export default ResponsiveDrawer;
+const mapStateToProps = (state) => ({
+  loggedIn: state.loggedIn,
+  access: state.accessToken,
+  refresh: state.refeshToken,
+  uid: state.uid,
+  userName: state.userName,
+  userEmail: state.userEmail
+
+});
+export default connect(mapStateToProps)(ResponsiveDrawer);

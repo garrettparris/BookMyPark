@@ -18,6 +18,8 @@ from .serializers import UserCreateSerializer
 from rest_framework.response import Response
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import status
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -64,13 +66,25 @@ def send_message(request):
     date = request.data.get('date')
     phone_number = request.data.get('phone_number')
     attendees = request.data.get('attendees')
-    data = requests.get(location)
+    data = requests.get('https://bookmypark.ca/api/locations/' + location)
     jsondata = data.json()
     location_name = jsondata['name']
     location_type = jsondata['type']
     account_sid = 'ACdc82aab8d58ebbe4fdb15e1b84958065' 
     auth_token = '47f948fbd52881a32bf1da463ee04738'
     client = Client(account_sid, auth_token)
+    loc_id = Location.objects.get(id = location )
+    Booking.objects.create(
+        location=loc_id,
+        name=name,
+        username=name,
+        attendees=attendees,
+        start=start,
+        end=end,
+        date=date,
+        phone_number=phone_number,
+        email = request.data.get('email')
+    )
     message = client.messages.create( 
                               from_='+18509403611',
                               body=location_name + ' ' + location_type + ' booked from ' + start + ' to ' + end +' on ' + date[:10] + ' by ' + name + ' for ' + attendees + ' people.',
@@ -90,14 +104,16 @@ class LocationViewSet(viewsets.ModelViewSet):
             latitude = request.POST.get('latitude')
 
         )
-        return HttpResponseRedirect('/success/')
+        return Response(status=status.HTTP_201_CREATED)
 class BookingViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
     queryset = Booking.objects.all().order_by('name')
     serializer_class = BookingSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['username','date','start','end']
     def create(self, request, *args, **kwargs):
         my_result=send_message(request)
-        return HttpResponseRedirect('/success/')
+        return Response(status=status.HTTP_201_CREATED)
 
 @decorators.api_view(["GET"])
 def current_user(request):

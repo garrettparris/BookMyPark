@@ -20,7 +20,7 @@ class logout extends React.Component {
     render() {
         return (<>
             {this.state.loggedIn && (
-                <Button style={{ position: 'absolute', bottom: '0', width: '99%', backgroundColor: 'red', borderRadius: '0', }} onClick={this.logout}>
+                <Button style={{ position: 'absolute', bottom: '0', width: '99%', backgroundColor: '#e53935', borderRadius: '0', }} onClick={this.logout}>
                     Logout
                 </Button>)}
         </>)

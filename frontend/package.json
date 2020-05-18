@@ -19,9 +19,12 @@
     "react-bootstrap": "^1.0.1",
     "react-datepicker": "^2.14.1",
     "react-dom": "^16.13.1",
+    "react-google-login": "^5.1.10",
     "react-icons": "^3.9.0",
     "react-leaflet": "^2.6.3",
     "react-login-modal-sm": "^1.0.8",
+    "react-phone-input-2": "^2.13.3",
+    "react-phone-number-input": "^3.0.22",
     "react-redux": "^7.2.0",
     "react-responsive": "^8.0.3",
     "react-router-dom": "^5.1.2",
@@ -49,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
